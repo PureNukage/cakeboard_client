@@ -9,7 +9,7 @@ if file != ""
 	file_text_close(file2)
 }
 //ipaddress =  "10.82.134.41" //"192.168.0.100"   "10.82.134.41"
-port = 64199 //64198
+port = 64198 //64198
 socket = network_create_socket(network_type)
 connected = network_connect(socket,ipaddress,port)
 

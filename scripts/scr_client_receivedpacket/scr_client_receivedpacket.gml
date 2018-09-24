@@ -13,6 +13,8 @@ switch(msgid)
 		compiledtimelist = buffer_read(read_buffer,buffer_string)
 		compiledcheckmarklist = buffer_read(read_buffer,buffer_string)
 		
+		global.activeclients = buffer_read(read_buffer,buffer_u32)
+		
 		global.userlist = ds_list_create()
 		global.statuslist = ds_list_create()
 		global.currentstatuslist = ds_list_create()
@@ -27,16 +29,15 @@ switch(msgid)
 		ds_list_read(global.timelist,compiledtimelist)
 		ds_list_read(global.checkmarklist,compiledcheckmarklist)
 		
-		//var z
-		//for (z=0;z<8;z++)
-		//{
-		//	//show_message(ds_list_find_value(global.timelist,z))	
-		//}
-		
 		with o_controller
 		{
 			scr_controller_populateboard()
 		}
+		
+		with o_connection_light{
+			connected = true
+			sprite_index = s_connection_connected
+		}	
 		
 	break;
 	case 1:
@@ -62,22 +63,7 @@ switch(msgid)
 		}
 	break;
 	case 2:
-	//Refresh
-		compiledrcurrentstatuslist = buffer_read(read_buffer,buffer_string)
-		var r
-		rstatuslist = ds_list_create()
-		ds_list_read(compiledrcurrentstatuslist,rstatuslist)
-		
-		for (r=0;r<ds_list_size(rstatuslist);r++)
-		{
-			with o_status
-			{
-				if statusid = r
-				{
-					status = ds_list_find_value(other.rstatuslist,r)
-				}
-			}
-		}
+	//Active Connection
 		
 	break;
 	case 3:
@@ -138,6 +124,11 @@ switch(msgid)
 			selected = _selected	
 		}
 	}
+	
+	break;
+	case 7:
+	//Update Active Client Count
+		global.activeclients = buffer_read(read_buffer,buffer_u32)
 	
 	break;
 }
