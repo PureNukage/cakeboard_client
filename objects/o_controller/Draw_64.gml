@@ -1,0 +1,6 @@
+//draw_text(10,10,"d: " + string(d))
+//draw_text(10,25,"b: " + string(b))
+//draw_text(10,40,"_x: " + string(_x))
+//draw_text(10,55,"_y: " + string(_y))
+//draw_text(10,70,"draw arrow: " + string(drawarrow))
+//draw_text(10,85,"diceroll: " + string(diceroll))
