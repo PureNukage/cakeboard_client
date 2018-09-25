@@ -19,6 +19,10 @@ scr_controller_background()
 #macro mouseover instance_position(mouse_x,mouse_y,id)
 #macro menuclick instance_position(mouse_x,mouse_y,o_status_menu)
 #macro f1 keyboard_check_pressed(vk_f1)
+#macro control keyboard_check_pressed(vk_control)
+#macro c keyboard_check_pressed(ord("C"))
+#macro v keyboard_check_pressed(ord("V"))
+
 
 #macro debug_on global.debug = true
 #macro debug_off global.debug = false

@@ -8,8 +8,7 @@ switch (selected)
 	//Selected
 		_text = keyboard_string
 		
-		//Max Character Length
-		
+		//Max Character Length	
 		draw_set_font(font)
 		if string_width(_text) > maxlength 
 		{
