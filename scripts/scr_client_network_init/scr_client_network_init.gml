@@ -9,7 +9,7 @@ if file != ""
 	file_text_close(file2)
 }
 //ipaddress =  "10.82.134.41" //"192.168.0.100"   "10.82.134.41"
-port = 64198 //64198
+port = 64197 //64198
 socket = network_create_socket(network_type)
 connected = network_connect(socket,ipaddress,port)
 
@@ -17,6 +17,6 @@ var size, type, alignment
 size = 1024
 type = buffer_wrap
 alignment = 1
-buffer = buffer_create(size, type, alignment)
+buffer = buffer_create(size,type,alignment)
 
 

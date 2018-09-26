@@ -3,8 +3,6 @@ if window_has_focus()
 {
 	if camera_get_view_width(global.camera) != window_get_width()
 	{
-		//camera_set_view_border(global.camera,window_get_width(),camera_get_view_border_y(global.camera))
-		//room_width = window_get_width()
 		camera_set_view_size(global.camera,window_get_width(),camera_get_view_height(global.camera))
 		camera_set_view_pos(global.camera,window_get_width(),camera_get_view_y(global.camera))
 		surface_resize(application_surface,window_get_width(),window_get_height())
@@ -12,8 +10,6 @@ if window_has_focus()
 	}
 	if camera_get_view_height(global.camera) != window_get_height()
 	{
-		//camera_set_view_border(global.camera,camera_get_view_border_x(global.camera),window_get_height())
-		//room_height = window_get_width()
 		camera_set_view_size(global.camera,camera_get_view_width(global.camera),window_get_height())
 		camera_set_view_pos(global.camera,camera_get_view_width(global.camera),window_get_height())
 		surface_resize(application_surface,window_get_width(),window_get_height())
@@ -28,7 +24,7 @@ if f1{
 //Mouseclick
 if mouseclick > 0
 {
-	mouseclick -= 1	
+	mouseclick--
 }
 
 //Dice Roll
