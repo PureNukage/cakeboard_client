@@ -15,7 +15,7 @@ if instance_number(o_timer) > 0{
 with o_status{
 	if statusid = whichstatus{
 		
-		var _timer = instance_create_layer(x+36,y+54,"Instances",o_timer)
+		var _timer = instance_create_layer(x+100,y+20,"Menu",o_timer)
 		
 		if whichbreak = "break"{
 			_timer.time = 15	

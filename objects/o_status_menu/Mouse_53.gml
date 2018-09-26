@@ -10,11 +10,16 @@ if menuclick
 				status = other.statusmenu
 			}
 		}				
-		if statusmenu = 2{
+		if statusmenu = 2{								//Break
 			scr_timer_break("break",statusmenuid)
 		}
-		else if statusmenu = 3{
+		else if statusmenu = 3{							//Lunch
 			scr_timer_break("lunch",statusmenuid)	
+		}
+		else{											//Anything thats not Break or Lunch
+			if instance_number(o_timer) > 0{
+				with o_timer{	instance_destroy()	}	
+			}
 		}
 		with o_client
 		{

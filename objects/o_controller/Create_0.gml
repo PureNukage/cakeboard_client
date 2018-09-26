@@ -23,13 +23,11 @@ scr_controller_background()
 #macro c keyboard_check_pressed(ord("C"))
 #macro v keyboard_check_pressed(ord("V"))
 
-
 #macro debug_on global.debug = true
 #macro debug_off global.debug = false
 
 #macro statusfill draw_rectangle(x+1,y+1,x+126,y+46,false)
 #macro statustext draw_text(x+5,y+10,statusstatus)
-
 
 #macro statusmenufill draw_rectangle(x+1,y+1,x+85,y+39,false)
 #macro statusmenutext draw_text(x+8,y+8,statusmenustatus)
