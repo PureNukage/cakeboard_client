@@ -13,7 +13,7 @@ switch(msgid)
 		compiledtimelist = buffer_read(read_buffer,buffer_string)
 		compiledcheckmarklist = buffer_read(read_buffer,buffer_string)
 		
-		global.activeclients = buffer_read(read_buffer,buffer_u32)
+		//global.activeclients = buffer_read(read_buffer,buffer_u32)
 		
 		global.userlist = ds_list_create()
 		global.statuslist = ds_list_create()
@@ -34,10 +34,10 @@ switch(msgid)
 			scr_controller_populateboard()
 		}
 		
-		with o_connection_light{
-			connected = true
-			sprite_index = s_connection_connected
-		}	
+		//with o_connection_light{
+		//	connected = true
+		//	sprite_index = s_connection_connected
+		//}	
 		
 	break;
 	case 1:
@@ -114,21 +114,21 @@ switch(msgid)
 	break;
 	case 6:
 	//Checkmarks
-	var _selected = buffer_read(read_buffer,buffer_u32)
-	var _ID = buffer_read(read_buffer,buffer_u32)
+	//var _selected = buffer_read(read_buffer,buffer_u32)
+	//var _ID = buffer_read(read_buffer,buffer_u32)
 	
-	with o_checkbox
-	{
-		if ID = _ID
-		{
-			selected = _selected	
-		}
-	}
+	//with o_checkbox
+	//{
+	//	if ID = _ID
+	//	{
+	//		selected = _selected	
+	//	}
+	//}
 	
 	break;
 	case 7:
 	//Update Active Client Count
-		global.activeclients = buffer_read(read_buffer,buffer_u32)
+		//global.activeclients = buffer_read(read_buffer,buffer_u32)
 	
 	break;
 }
