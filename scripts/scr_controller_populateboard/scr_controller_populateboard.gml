@@ -13,6 +13,33 @@ textboxY = y+164
 timeX = x+828
 timeY = y+164
 
+//if room = 0
+//{
+//	if instance_number(o_nameplate) > 0
+//	{
+//		with o_nameplate
+//		{
+//			instance_destroy()	
+//		}
+//		with o_checkbox
+//		{
+//			instance_destroy()	
+//		}
+//		with o_status
+//		{
+//			instance_destroy()	
+//		}
+//		with o_textbox
+//		{
+//			instance_destroy()	
+//		}
+//		with o_time
+//		{
+//			instance_destroy()	
+//		}
+//	}	
+//}
+
 for (i=0;i < global.totalusers;i++)
 {
 	//Checkmark Box

@@ -21,6 +21,14 @@ if f1{
 	global.debug = !global.debug	
 }
 
+if f2{
+	if room = 1
+	{
+		roomprevious = room
+		room_goto(board_0)
+	}
+}		
+
 //Mouseclick
 if mouseclick > 0
 {
@@ -74,6 +82,7 @@ else if diceroll = 0
 	show_debug_message("List of Dice Rolls: " + string(diceroll))
 	show_debug_message("Draw arrow: " + string(drawarrow))
 }
+
 
 
 

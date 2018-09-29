@@ -4,14 +4,16 @@ var msgid = buffer_read(read_buffer,buffer_u8)
 switch(msgid)
 {
 	case 0:
-	//Total Users
+	#region On Connection
 		global.totalusers = buffer_read(read_buffer,buffer_u32)
-		compileduserlist = buffer_read(read_buffer,buffer_string)
-		compiledstatuslist = buffer_read(read_buffer,buffer_string)
-		compiledcurrentstatuslist = buffer_read(read_buffer,buffer_string)
-		compiledtextboxlist = buffer_read(read_buffer,buffer_string)
-		compiledtimelist = buffer_read(read_buffer,buffer_string)
-		compiledcheckmarklist = buffer_read(read_buffer,buffer_string)
+		var _compileduserlist = buffer_read(read_buffer,buffer_string)
+		var _compiledstatuslist = buffer_read(read_buffer,buffer_string)
+		var _compiledcurrentstatuslist = buffer_read(read_buffer,buffer_string)
+		var _compiledtextboxlist = buffer_read(read_buffer,buffer_string)
+		var _compiledtimelist = buffer_read(read_buffer,buffer_string)
+		var _compiledcheckmarklist = buffer_read(read_buffer,buffer_string)
+		var _compiledwindowsnamelist = buffer_read(read_buffer,buffer_string)
+		var _compiledadminrightslist = buffer_read(read_buffer,buffer_string)
 		
 		//global.activeclients = buffer_read(read_buffer,buffer_u32)
 		
@@ -21,13 +23,17 @@ switch(msgid)
 		global.textboxlist = ds_list_create()
 		global.timelist = ds_list_create()
 		global.checkmarklist = ds_list_create()
+		global.windowsnames = ds_list_create()
+		global.adminrights = ds_list_create()
 		
-		ds_list_read(global.userlist,compileduserlist)
-		ds_list_read(global.statuslist,compiledstatuslist)
-		ds_list_read(global.currentstatuslist,compiledcurrentstatuslist)
-		ds_list_read(global.textboxlist,compiledtextboxlist)
-		ds_list_read(global.timelist,compiledtimelist)
-		ds_list_read(global.checkmarklist,compiledcheckmarklist)
+		ds_list_read(global.userlist,_compileduserlist)
+		ds_list_read(global.statuslist,_compiledstatuslist)
+		ds_list_read(global.currentstatuslist,_compiledcurrentstatuslist)
+		ds_list_read(global.textboxlist,_compiledtextboxlist)
+		ds_list_read(global.timelist,_compiledtimelist)
+		ds_list_read(global.checkmarklist,_compiledcheckmarklist)
+		ds_list_read(global.windowsnames,_compiledwindowsnamelist)
+		ds_list_read(global.adminrights,_compiledadminrightslist)
 		
 		with o_controller
 		{
@@ -40,8 +46,9 @@ switch(msgid)
 		//}	
 		
 	break;
+	#endregion
 	case 1:
-	//Change Status
+	#region Change Status
 		var _statusid, _status, _time
 		_statusid = buffer_read(read_buffer,buffer_u32)
 		_status = buffer_read(read_buffer,buffer_u32) 
@@ -62,12 +69,14 @@ switch(msgid)
 			}
 		}
 	break;
+	#endregion
 	case 2:
-	//Active Connection
+	#region Active Connection
 		
 	break;
+	#endregion
 	case 3:
-	//Textbox
+	#region Textbox
 		var _textboxid, __text
 		
 		_textboxid = buffer_read(read_buffer,buffer_u32)
@@ -81,16 +90,18 @@ switch(msgid)
 			}
 		}
 	break;
+	#endregion
 	case 4:
-	//Message
+	#region Message
 		var _message
 		_message = buffer_read(read_buffer,buffer_string)
 		
 		show_message(_message)
 		
 	break;
+	#endregion
 	case 5:
-	//Dice Roll
+	#region Dice Roll
 		var compiled_order = buffer_read(read_buffer,buffer_string)
 		order = ds_list_create()
 		ds_list_read(order,compiled_order)
@@ -112,23 +123,100 @@ switch(msgid)
 		}
 	
 	break;
+	#endregion
 	case 6:
-	//Checkmarks
-	//var _selected = buffer_read(read_buffer,buffer_u32)
-	//var _ID = buffer_read(read_buffer,buffer_u32)
+	#region Checkmarks
+	var _selected = buffer_read(read_buffer,buffer_u32)
+	var _ID = buffer_read(read_buffer,buffer_u32)
 	
-	//with o_checkbox
-	//{
-	//	if ID = _ID
-	//	{
-	//		selected = _selected	
-	//	}
-	//}
+	with o_checkbox
+	{
+		if ID = _ID
+		{
+			selected = _selected	
+		}
+	}
 	
 	break;
+	#endregion 
 	case 7:
-	//Update Active Client Count
+	#region Update Active Client Count
 		//global.activeclients = buffer_read(read_buffer,buffer_u32)
 	
 	break;
+	#endregion
+	case 8:
+	#region ManageUsers Update
+		var _compiled_list_firstname_ID, _compiled_list_firstname_value, _compiled_list_windowsname_ID,
+		_compiled_list_windowsname_value, _compiled_list_admin_ID, _compiled_list_admin_value,
+		_list_firstname_ID, _list_firstname_value, _list_windowsname_ID, _list_windowsname_value,
+		_list_admin_ID, _list_admin_value, u, _ID, _value
+
+		_compiled_list_firstname_ID = buffer_read(read_buffer,buffer_string)
+		_compiled_list_firstname_value = buffer_read(read_buffer,buffer_string)
+		_compiled_list_windowsname_ID = buffer_read(read_buffer,buffer_string)
+		_compiled_list_windowsname_value = buffer_read(read_buffer,buffer_string)
+		_compiled_list_admin_ID = buffer_read(read_buffer,buffer_string)
+		_compiled_list_admin_value = buffer_read(read_buffer,buffer_string)	
+		
+		_list_firstname_ID = ds_list_create()
+		_list_firstname_value = ds_list_create()
+		_list_windowsname_ID = ds_list_create()
+		_list_windowsname_value = ds_list_create()
+		_list_admin_ID = ds_list_create()
+		_list_admin_value = ds_list_create()
+
+		ds_list_read(_list_firstname_ID,_compiled_list_firstname_ID)
+		ds_list_read(_list_firstname_value,_compiled_list_firstname_value)
+		ds_list_read(_list_windowsname_ID,_compiled_list_windowsname_ID)
+		ds_list_read(_list_windowsname_value,_compiled_list_windowsname_value)
+		ds_list_read(_list_admin_ID,_compiled_list_admin_ID)
+		ds_list_read(_list_admin_value,_compiled_list_admin_value)
+		
+		if !ds_list_empty(_list_firstname_ID){
+			for (u=0;u<ds_list_size(_list_firstname_ID);u++)
+			{
+				_ID = ds_list_find_value(_list_firstname_ID,u)
+				_value = ds_list_find_value(_list_firstname_value,u)
+				
+				ds_list_insert(global.userlist,_ID,_value)
+			}
+		}
+		if !ds_list_empty(_list_windowsname_ID){
+			show_debug_message("Windowsname list size: " + string(ds_list_size(_list_admin_ID)))
+			for (u=0;u<ds_list_size(_list_windowsname_ID);u++)
+			{
+				_ID = ds_list_find_value(_list_windowsname_ID,u)
+				_value = ds_list_find_value(_list_windowsname_value,u)
+				
+				ds_list_insert(global.windowsnames,_ID,_value)
+			}
+		}
+		if !ds_list_empty(_list_admin_ID){
+			show_debug_message("Admin list size: " + string(ds_list_size(_list_admin_ID)))
+			for (u=0;u<ds_list_size(_list_admin_ID);u++)
+			{
+				_ID = ds_list_find_value(_list_admin_ID,u)
+				_value = ds_list_find_value(_list_admin_value,u)
+				
+				ds_list_insert(global.adminrights,_ID,_value)
+			}
+		}
+		
+		//show_debug_message("6 Windowsname: " + string(ds_list_find_value(global.windowsnames,6)))
+		//show_debug_message("6 Adminrights: " + string(ds_list_find_value(global.adminrights,6)))
+		//show_debug_message("7 Windowsname: " + string(ds_list_find_value(global.windowsnames,7)))
+		//show_debug_message("7 Adminrights: " + string(ds_list_find_value(global.adminrights,7)))
+		
+		
+		if room = 1
+		{
+			with o_manageuser_controller
+			{
+				scr_manageuser_populate()
+			}
+		}
+	
+	break;
+	#endregion
 }
