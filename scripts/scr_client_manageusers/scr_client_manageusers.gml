@@ -10,7 +10,7 @@ _list_windowsname_value = ds_list_create()
 _list_admin_ID = ds_list_create()
 _list_admin_value = ds_list_create()
 
-for (i=0;i<global.totalusers;i++)
+for (i=0;i<o_controller.totalusers;i++)
 {
 	with o_manageuser_firstname
 	{

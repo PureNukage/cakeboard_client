@@ -7,7 +7,7 @@ if mouseover
 	else
 	{
 		var list = ds_list_create()
-		for (var i=0; i<global.totalusers; i++)
+		for (var i=0; i<o_controller.totalusers; i++)
 		{
 			with o_dice_menu
 			{

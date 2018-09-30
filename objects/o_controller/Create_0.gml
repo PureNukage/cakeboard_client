@@ -7,7 +7,7 @@ _y = 0
 drawarrow = 0
 diceroll = -1
 diceorder = ds_list_create()
-global.debug = false
+o_controller.debug = false
 roomprevious = board_0
 
 #endregion
@@ -21,8 +21,8 @@ roomprevious = board_0
 #macro c keyboard_check_pressed(ord("C"))
 #macro v keyboard_check_pressed(ord("V"))
 
-#macro debug_on global.debug = true
-#macro debug_off global.debug = false
+#macro debug_on o_controller.debug = true
+#macro debug_off o_controller.debug = false
 
 #macro statusfill draw_rectangle(x+1,y+1,x+126,y+46,false)
 #macro statustext draw_text(x+5,y+10,statusstatus)
@@ -35,7 +35,7 @@ roomprevious = board_0
 #region Menu
 //Menu Var Init
 fileopen = false
-
+toolopen = false
 adminopen = false
 
 

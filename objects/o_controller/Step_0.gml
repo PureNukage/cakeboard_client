@@ -1,24 +1,24 @@
 //Resizing the Window
 if window_has_focus()
 {
-	if camera_get_view_width(global.camera) != window_get_width()
+	if camera_get_view_width(camera) != window_get_width()
 	{
-		camera_set_view_size(global.camera,window_get_width(),camera_get_view_height(global.camera))
-		camera_set_view_pos(global.camera,window_get_width(),camera_get_view_y(global.camera))
+		camera_set_view_size(camera,window_get_width(),camera_get_view_height(camera))
+		camera_set_view_pos(camera,window_get_width(),camera_get_view_y(camera))
 		surface_resize(application_surface,window_get_width(),window_get_height())
 		
 	}
-	if camera_get_view_height(global.camera) != window_get_height()
+	if camera_get_view_height(camera) != window_get_height()
 	{
-		camera_set_view_size(global.camera,camera_get_view_width(global.camera),window_get_height())
-		camera_set_view_pos(global.camera,camera_get_view_width(global.camera),window_get_height())
+		camera_set_view_size(camera,camera_get_view_width(camera),window_get_height())
+		camera_set_view_pos(camera,camera_get_view_width(camera),window_get_height())
 		surface_resize(application_surface,window_get_width(),window_get_height())
 	}
 }
 
 //Debug
 if f1{
-	global.debug = !global.debug	
+	o_controller.debug = !o_controller.debug	
 }
 
 if f2{
@@ -52,6 +52,10 @@ if diceroll > 0
 			}
 		}
 		drawarrow = 1
+		if (instance_number(o_arrow) = 0) and room = board_0	//If returning to board room
+		{														//and dice roll is happening
+			instance_create_layer(x,y,"Instances",o_arrow)	
+		}
 		with o_arrow
 		{
 			x = other._x

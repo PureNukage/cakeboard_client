@@ -8,7 +8,8 @@
         "91668fa5-5107-4e97-a13a-ebebb082a285",
         "3c261078-a11f-4cd0-8dab-6e79cdb398eb",
         "7944128d-2fbd-4f69-86d7-9a0b04070670",
-        "ed9b58a7-62b2-48ac-9166-53d54d876998"
+        "ed9b58a7-62b2-48ac-9166-53d54d876998",
+        "e917fd4f-48e5-4054-b721-16417d3e2f2f"
     ],
     "filterType": "GMObject",
     "folderName": "ManageUser",

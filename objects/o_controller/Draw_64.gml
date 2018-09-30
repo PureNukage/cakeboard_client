@@ -9,7 +9,7 @@ if debug_on
 
 //Menu Bar
 draw_set_color(c_gray)
-draw_rectangle(-1,-1,camera_get_view_width(global.camera),menu_barY,false)
+draw_rectangle(-1,-1,camera_get_view_width(camera),menu_barY,false)
 
 if mouseover_menu_file{
 	draw_set_color(color_menu_highlighted)	

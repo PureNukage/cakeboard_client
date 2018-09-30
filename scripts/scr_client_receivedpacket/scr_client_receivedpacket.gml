@@ -5,7 +5,7 @@ switch(msgid)
 {
 	case 0:
 	#region On Connection
-		global.totalusers = buffer_read(read_buffer,buffer_u32)
+		var _totalusers = buffer_read(read_buffer,buffer_u32)
 		var _compileduserlist = buffer_read(read_buffer,buffer_string)
 		var _compiledstatuslist = buffer_read(read_buffer,buffer_string)
 		var _compiledcurrentstatuslist = buffer_read(read_buffer,buffer_string)
@@ -17,27 +17,29 @@ switch(msgid)
 		
 		//global.activeclients = buffer_read(read_buffer,buffer_u32)
 		
-		global.userlist = ds_list_create()
-		global.statuslist = ds_list_create()
-		global.currentstatuslist = ds_list_create()
-		global.textboxlist = ds_list_create()
-		global.timelist = ds_list_create()
-		global.checkmarklist = ds_list_create()
-		global.windowsnames = ds_list_create()
-		global.adminrights = ds_list_create()
-		
-		ds_list_read(global.userlist,_compileduserlist)
-		ds_list_read(global.statuslist,_compiledstatuslist)
-		ds_list_read(global.currentstatuslist,_compiledcurrentstatuslist)
-		ds_list_read(global.textboxlist,_compiledtextboxlist)
-		ds_list_read(global.timelist,_compiledtimelist)
-		ds_list_read(global.checkmarklist,_compiledcheckmarklist)
-		ds_list_read(global.windowsnames,_compiledwindowsnamelist)
-		ds_list_read(global.adminrights,_compiledadminrightslist)
-		
 		with o_controller
 		{
-			scr_controller_populateboard()
+			totalusers = _totalusers
+			userlist = ds_list_create()
+			statuslist = ds_list_create()
+			currentstatuslist = ds_list_create()
+			textboxlist = ds_list_create()
+			timelist = ds_list_create()
+			checkmarklist = ds_list_create()
+			windowsnames = ds_list_create()
+			adminrights = ds_list_create()
+		
+		
+			ds_list_read(userlist,_compileduserlist)
+			ds_list_read(statuslist,_compiledstatuslist)
+			ds_list_read(currentstatuslist,_compiledcurrentstatuslist)
+			ds_list_read(textboxlist,_compiledtextboxlist)
+			ds_list_read(timelist,_compiledtimelist)
+			ds_list_read(checkmarklist,_compiledcheckmarklist)
+			ds_list_read(windowsnames,_compiledwindowsnamelist)
+			ds_list_read(adminrights,_compiledadminrightslist)
+				
+			scr_controller_populateboard()		
 		}
 		
 		//with o_connection_light{
@@ -53,6 +55,9 @@ switch(msgid)
 		_statusid = buffer_read(read_buffer,buffer_u32)
 		_status = buffer_read(read_buffer,buffer_u32) 
 		_time = buffer_read(read_buffer,buffer_string)
+		
+		ds_list_replace(o_controller.currentstatuslist,_statusid,_status)
+		ds_list_replace(o_controller.timelist,_statusid,_time)
 		
 		with o_status
 		{
@@ -81,6 +86,8 @@ switch(msgid)
 		
 		_textboxid = buffer_read(read_buffer,buffer_u32)
 		__text = buffer_read(read_buffer,buffer_string)
+		
+		ds_list_replace(o_controller.textboxlist,_textboxid,__text)
 		
 		with o_textbox
 		{
@@ -128,6 +135,8 @@ switch(msgid)
 	#region Checkmarks
 	var _selected = buffer_read(read_buffer,buffer_u32)
 	var _ID = buffer_read(read_buffer,buffer_u32)
+	
+	ds_list_replace(o_controller.checkmarklist,_ID,_selected)
 	
 	with o_checkbox
 	{
@@ -179,7 +188,7 @@ switch(msgid)
 				_ID = ds_list_find_value(_list_firstname_ID,u)
 				_value = ds_list_find_value(_list_firstname_value,u)
 				
-				ds_list_insert(global.userlist,_ID,_value)
+				ds_list_replace(o_controller.userlist,_ID,_value)
 			}
 		}
 		if !ds_list_empty(_list_windowsname_ID){
@@ -189,7 +198,7 @@ switch(msgid)
 				_ID = ds_list_find_value(_list_windowsname_ID,u)
 				_value = ds_list_find_value(_list_windowsname_value,u)
 				
-				ds_list_insert(global.windowsnames,_ID,_value)
+				ds_list_replace(o_controller.windowsnames,_ID,_value)
 			}
 		}
 		if !ds_list_empty(_list_admin_ID){
@@ -199,7 +208,7 @@ switch(msgid)
 				_ID = ds_list_find_value(_list_admin_ID,u)
 				_value = ds_list_find_value(_list_admin_value,u)
 				
-				ds_list_insert(global.adminrights,_ID,_value)
+				ds_list_replace(o_controller.adminrights,_ID,_value)
 			}
 		}
 		
@@ -216,6 +225,12 @@ switch(msgid)
 				scr_manageuser_populate()
 			}
 		}
+	
+	break;
+	#endregion
+	case 9:
+	#region ManageUsers Add/Remove
+	
 	
 	break;
 	#endregion
