@@ -77,9 +77,9 @@ for (i=0;i<=o_controller.totalusers;i++)
 	}
 	else
 	{
-		_add.imagealpha = .5
-		_add.text = "Add"
-		_add.color = make_color_rgb(30,198,26)
+		_remove.imagealpha = .5
+		_remove.text = "Add"
+		_remove.color = make_color_rgb(30,198,26)
 	}
 	
 	_y += 56
