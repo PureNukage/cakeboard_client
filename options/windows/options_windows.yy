@@ -34,5 +34,5 @@
         "minor": 1,
         "revision": 2
     },
-    "option_windows_vsync": false
+    "option_windows_vsync": true
 }

@@ -1,4 +1,6 @@
 //Var Init
+imagealpha = 1							//Opacity
+Font = font1
 
 /*
 

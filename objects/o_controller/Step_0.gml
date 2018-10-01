@@ -1,18 +1,12 @@
 //Resizing the Window
 if window_has_focus()
 {
-	if camera_get_view_width(camera) != window_get_width()
+	if camera_get_view_width(camera) != (window_get_width() or window_get_height())
 	{
-		camera_set_view_size(camera,window_get_width(),camera_get_view_height(camera))
-		camera_set_view_pos(camera,window_get_width(),camera_get_view_y(camera))
+		camera_set_view_size(camera,window_get_width(),window_get_height())
+		//camera_set_view_pos(camera,287,0)
 		surface_resize(application_surface,window_get_width(),window_get_height())
 		
-	}
-	if camera_get_view_height(camera) != window_get_height()
-	{
-		camera_set_view_size(camera,camera_get_view_width(camera),window_get_height())
-		camera_set_view_pos(camera,camera_get_view_width(camera),window_get_height())
-		surface_resize(application_surface,window_get_width(),window_get_height())
 	}
 }
 

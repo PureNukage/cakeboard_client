@@ -9,7 +9,7 @@ switch(selected)
 		_text = keyboard_string
 		
 		//Max Character Length	
-		draw_set_font(font)
+		draw_set_font(Font)
 		if string_width(_text) > maxlength 
 		{
 			_text = string_copy(_text,1,string_length(_text)-1)	

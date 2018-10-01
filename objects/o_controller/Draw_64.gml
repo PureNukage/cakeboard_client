@@ -5,6 +5,8 @@ if debug_on
 	//draw_text(x+15,y+45,"Mouseclick: " + string(mouseclick))
 	draw_text(x+15,y+45,"Mouse_x: " + string(gui_x))
 	draw_text(x+15,y+60,"Mouse_y: " + string(gui_y))
+	draw_text(x+15,y+75,"surface_x: " + string(surface_get_width(application_surface)))
+	draw_text(x+15,y+90,"surface_y: " + string(surface_get_height(application_surface)))
 }	
 
 //Menu Bar
