@@ -35,7 +35,7 @@ roomprevious = board_0
 #region Menu
 //Menu Var Init
 fileopen = false
-toolopen = false
+toolsopen = false
 adminopen = false
 
 
@@ -49,6 +49,7 @@ menu_1_text = "Tools"
 #macro mouseover_menu_tools point_in_rectangle(gui_x,gui_y,52,0,108,menu_barY)
 #macro mouseover_menu_admin point_in_rectangle(gui_x,gui_y,112,0,168,menu_barY)
 #macro mouseover_menu_manageuser point_in_rectangle(gui_x,gui_y,112,menu_barY,224,menu_barY*2)
+#macro mouseover_menu_themes point_in_rectangle(gui_x,gui_y,52,menu_barY,104,menu_barY*2)
 
 #endregion
 
