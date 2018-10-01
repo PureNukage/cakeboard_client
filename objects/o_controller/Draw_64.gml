@@ -40,7 +40,7 @@ if toolsopen = true{
 		draw_set_color(color_menu_highlighted)	
 	}
 	else draw_set_color(c_gray)
-	draw_rectangle(52,menu_barY,170,menu_barY*2,false)
+	draw_rectangle(52,menu_barY,115,menu_barY*2,false)
 	draw_set_color(c_black)
 	draw_text(58,menu_barY+2,"Themes")	
 	#endregion
