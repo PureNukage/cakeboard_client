@@ -1,8 +1,8 @@
 {
-    "id": "a0d76a96-5e34-423d-aee6-58532a60a8f4",
+    "id": "24d1bcd8-69f4-4ca3-9d36-2ef8684257db",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_timer_break",
+    "name": "scr_request_assistance",
     "IsCompatibility": false,
     "IsDnD": false
 }

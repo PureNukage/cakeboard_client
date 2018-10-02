@@ -12,6 +12,18 @@ roomprevious = board_0
 freshboard = false
 profile = 0
 admin = 0
+theme = 0
+thememap=ds_grid_create(5,5)
+ds_grid_add(thememap,0,"o_nameplate",s_nameplate)
+ds_grid_add(thememap,0,"o_arrow",s_arrow)
+ds_grid_add(thememap,0,"o_textbox",s_textbox)
+ds_grid_add(thememap,0,"o_dice",s_dice)
+//ds_grid_add(thememap,0,o_header,s_header)
+//ds_grid_add(thememap,1,o_nameplate,s_nameplate1)
+//ds_grid_add(thememap,1,o_arrow,s_arrow1)
+//ds_grid_add(thememap,1,o_textbox,s_textbox1)
+//ds_grid_add(thememap,1,o_dice,s_dice1)
+//ds_grid_add(thememap,1,o_header,s_header1)
 
 #endregion
 
