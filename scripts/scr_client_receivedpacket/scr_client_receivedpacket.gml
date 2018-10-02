@@ -6,6 +6,7 @@ switch(msgid)
 	case 0:
 	#region On Connection
 		var _totalusers = buffer_read(read_buffer,buffer_u32)
+		var _whoami = buffer_read(read_buffer,buffer_u32)
 		var _compileduserlist = buffer_read(read_buffer,buffer_string)
 		var _compiledstatuslist = buffer_read(read_buffer,buffer_string)
 		var _compiledcurrentstatuslist = buffer_read(read_buffer,buffer_string)
@@ -16,6 +17,18 @@ switch(msgid)
 		var _compiledadminrightslist = buffer_read(read_buffer,buffer_string)
 		
 		//global.activeclients = buffer_read(read_buffer,buffer_u32)
+		
+		//Who did I sign into
+		if _whoami = -1{
+			//Guest
+			o_controller.profile = -1
+		}
+		else{
+			//I signed into someone!
+			o_controller.profile = _whoami
+		}		
+		
+		show_debug_message("whoami: " + string(_whoami))
 		
 		with o_controller
 		{
@@ -38,6 +51,16 @@ switch(msgid)
 			ds_list_read(checkmarklist,_compiledcheckmarklist)
 			ds_list_read(windowsnames,_compiledwindowsnamelist)
 			ds_list_read(adminrights,_compiledadminrightslist)
+			
+			//Do I have admin rights?
+			with o_controller
+			{
+				var _admin = ds_list_find_value(adminrights,profile)
+				if _admin = "undefined"{
+					admin = -1 //Guest			
+				}
+				else admin = _admin
+			}
 			
 			if totalusers = 0{
 				freshboard = true
@@ -278,6 +301,7 @@ switch(msgid)
 			{
 				instance_destroy()	
 			}
+			with o_freshboard	{	instance_destroy()	}
 			with o_controller
 			{
 				scr_controller_populateboard()

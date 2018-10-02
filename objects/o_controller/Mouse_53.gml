@@ -9,7 +9,7 @@ if mouseover_menu_tools{
 }
 else toolsopen = false
 
-if mouseover_menu_admin{
+if mouseover_menu_admin and admin = 1{
 	adminopen = !adminopen
 }
 else if !mouseover_menu_manageuser{

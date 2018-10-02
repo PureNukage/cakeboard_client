@@ -8,7 +8,7 @@ var _statusid, _status
 _statusid = argument[0]
 _status = argument[1]
 
-bufferchangestatus = buffer_create(1024,buffer_fixed,1)
+var bufferchangestatus = buffer_create(1024,buffer_fixed,1)
 
 buffer_seek(bufferchangestatus,buffer_seek_start,0)
 buffer_write(bufferchangestatus,buffer_u8,1)

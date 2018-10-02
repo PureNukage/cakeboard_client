@@ -4,8 +4,9 @@ if debug_on
 	draw_text(x+15,y+30,"Total Users: "+string(totalusers))
 	draw_text(x+200,y+30,"Freshboard: " +string(freshboard))
 	draw_text(x+15,y+45,"User: " + string(environment_get_variable("USERNAME")))
-	//draw_text(x+15,y+45,"Mouseclick: " + string(mouseclick))
+	draw_text(x+200,y+45,"Profile: " + string(profile))
 	draw_text(x+15,y+60,"Mouse_x: " + string(gui_x))
+	draw_text(x+200,y+60,"Admin: " + string(admin))
 	draw_text(x+15,y+75,"Mouse_y: " + string(gui_y))
 	draw_text(x+15,y+90,"surface_x: " + string(surface_get_width(application_surface)))
 	draw_text(x+15,y+105,"surface_y: " + string(surface_get_height(application_surface)))
@@ -28,7 +29,7 @@ if mouseover_menu_tools{
 else draw_set_color(c_gray)
 draw_rectangle(52,0,108,menu_barY,false)
 
-if mouseover_menu_admin{
+if mouseover_menu_admin and admin = 1{
 	draw_set_color(color_menu_highlighted)	
 }
 else draw_set_color(c_gray)
@@ -65,4 +66,6 @@ if adminopen = true{
 draw_set_color(c_black)
 draw_text(5,2,"File")
 draw_text(58,2,"Tools")
-draw_text(118,2,"Admin")
+if admin = 1{
+	draw_text(118,2,"Admin")
+}

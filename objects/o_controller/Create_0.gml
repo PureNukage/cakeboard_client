@@ -10,6 +10,8 @@ diceorder = ds_list_create()
 o_controller.debug = false
 roomprevious = board_0
 freshboard = false
+profile = 0
+admin = 0
 
 #endregion
 
