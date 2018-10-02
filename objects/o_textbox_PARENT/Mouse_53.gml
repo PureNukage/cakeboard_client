@@ -1,6 +1,9 @@
 if mouseover
 {
 	selected = !selected
+	if imagealpha < 1{
+		text = ""	
+	}
 	if selected = 1
 	{
 		keyboard_string = text

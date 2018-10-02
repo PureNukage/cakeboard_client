@@ -9,6 +9,7 @@ diceroll = -1
 diceorder = ds_list_create()
 o_controller.debug = false
 roomprevious = board_0
+freshboard = false
 
 #endregion
 

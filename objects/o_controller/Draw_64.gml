@@ -1,16 +1,19 @@
 if debug_on
 {
 	//draw_text(x+15,y+15,"Active Clients: " + string(global.activeclients))
-	draw_text(x+15,y+30,"User: " + string(environment_get_variable("USERNAME")))
+	draw_text(x+15,y+30,"Total Users: "+string(totalusers))
+	draw_text(x+200,y+30,"Freshboard: " +string(freshboard))
+	draw_text(x+15,y+45,"User: " + string(environment_get_variable("USERNAME")))
 	//draw_text(x+15,y+45,"Mouseclick: " + string(mouseclick))
-	draw_text(x+15,y+45,"Mouse_x: " + string(gui_x))
-	draw_text(x+15,y+60,"Mouse_y: " + string(gui_y))
-	draw_text(x+15,y+75,"surface_x: " + string(surface_get_width(application_surface)))
-	draw_text(x+15,y+90,"surface_y: " + string(surface_get_height(application_surface)))
+	draw_text(x+15,y+60,"Mouse_x: " + string(gui_x))
+	draw_text(x+15,y+75,"Mouse_y: " + string(gui_y))
+	draw_text(x+15,y+90,"surface_x: " + string(surface_get_width(application_surface)))
+	draw_text(x+15,y+105,"surface_y: " + string(surface_get_height(application_surface)))
 }	
 
 //Menu Bar
 draw_set_color(c_gray)
+draw_set_alpha(1)
 draw_rectangle(-1,-1,camera_get_view_width(camera),menu_barY,false)
 
 if mouseover_menu_file{

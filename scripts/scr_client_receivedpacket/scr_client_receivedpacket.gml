@@ -38,6 +38,10 @@ switch(msgid)
 			ds_list_read(checkmarklist,_compiledcheckmarklist)
 			ds_list_read(windowsnames,_compiledwindowsnamelist)
 			ds_list_read(adminrights,_compiledadminrightslist)
+			
+			if totalusers = 0{
+				freshboard = true
+			}
 				
 			scr_controller_populateboard()		
 		}
@@ -231,6 +235,69 @@ switch(msgid)
 	case 9:
 	#region ManageUsers Add/Remove
 	
+		var _totalusers_new = buffer_read(read_buffer,buffer_u32)
+		var _compiled_names = buffer_read(read_buffer,buffer_string)
+		var _compiled_windowsnames = buffer_read(read_buffer,buffer_string)
+		var _compiled_adminrights = buffer_read(read_buffer,buffer_string)
+		var _compiled_status = buffer_read(read_buffer,buffer_string)
+		var _compiled_textbox = buffer_read(read_buffer,buffer_string)
+		var _compiled_time = buffer_read(read_buffer,buffer_string)
+		var _compiled_checkmark = buffer_read(read_buffer,buffer_string)
+		
+		with o_controller
+		{
+			totalusers = _totalusers_new
+			if totalusers = 0{
+				freshboard = true	
+			}
+			else freshboard = false
+			
+			ds_list_clear(userlist)
+			//ds_list_clear(statuslist)
+			ds_list_clear(currentstatuslist)
+			ds_list_clear(textboxlist)
+			ds_list_clear(timelist)
+			ds_list_clear(checkmarklist)
+			ds_list_clear(windowsnames)
+			ds_list_clear(adminrights)
+		
+			ds_list_read(userlist,_compiled_names)
+			//ds_list_read(statuslist,_compiled_status)
+			ds_list_read(currentstatuslist,_compiled_status)
+			ds_list_read(textboxlist,_compiled_textbox)
+			ds_list_read(timelist,_compiled_time)
+			ds_list_read(checkmarklist,_compiled_checkmark)
+			ds_list_read(windowsnames,_compiled_windowsnames)
+			ds_list_read(adminrights,_compiled_adminrights)
+			
+		}
+				
+		if room = board_0
+		{
+			with o_board_PARENT
+			{
+				instance_destroy()	
+			}
+			with o_controller
+			{
+				scr_controller_populateboard()
+			}
+		}
+		if room = manageuser_1
+		{
+			with o_manageuser_controller
+			{
+				instance_destroy()	
+			}
+			with o_manageuser_firstname{	instance_destroy()	}
+			with o_manageuser_windowsname{	instance_destroy()	}
+			with o_manageuser_admin{	instance_destroy()	}
+			with o_manageuser_remove{	instance_destroy()	}	
+			with o_manageuser_save{	instance_destroy()	}
+			with o_back{	instance_destroy()	}
+			instance_create_layer(544,128,"Instances",o_manageuser_controller)
+		}	
+		
 	
 	break;
 	#endregion

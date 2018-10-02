@@ -24,7 +24,7 @@ with o_manageuser_admin{
 
 var buffer = buffer_create(1024,buffer_fixed,1)
 buffer_seek(buffer,buffer_seek_start,0)
-buffer_write(buffer,buffer_u8,8)
+buffer_write(buffer,buffer_u8,9)
 buffer_write(buffer,buffer_u32,_ID)
 buffer_write(buffer,buffer_string,_name)
 buffer_write(buffer,buffer_string,_windowsname)

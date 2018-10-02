@@ -69,4 +69,9 @@ for (i=0;i < o_controller.totalusers;i++)
 	
 }
 
+if o_controller.totalusers = 0
+{
+	instance_create_layer(x+224,y+164,"Instances",o_freshboard)
+}
+
 
