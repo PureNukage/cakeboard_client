@@ -1,4 +1,4 @@
-if mouseover and o_controller.mouseclick = 0
+if mouseover and o_controller.mouseclick = 0 and (o_controller.profile = textboxid or o_controller.admin = 1)
 {
 	selected = !selected
 	if selected = 1

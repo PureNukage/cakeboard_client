@@ -1,6 +1,6 @@
-if menuclick
+if mouseover
 {
-	if mouseover
+	if menuclick
 	{
 		o_controller.mouseclick = 10
 		with o_status

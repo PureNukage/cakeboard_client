@@ -36,7 +36,3 @@ Inside of o_controller Create -> Section themes -
 
 We have to add the object to ALL themes even if the sprite will not change. At the very least make it return
 to the default sprite
-
-Inside of the object we wanted affected, add the following in the Create event:
-
-sprite_index=theme_select

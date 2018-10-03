@@ -66,7 +66,7 @@
             "Key": "08087f2c-26ba-4856-bcf3-57278fa1473d",
             "Value": {
                 "id": "4ae584be-2e8d-4b27-a4b3-5b7df528ecec",
-                "resourcePath": "sprites\\s_textbox\\s_textbox.yy",
+                "resourcePath": "sprites\\s_textbox_0\\s_textbox_0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -92,6 +92,14 @@
                 "id": "e1fcade3-f5f8-454e-a942-fda86a2cbec3",
                 "resourcePath": "sprites\\s_chipotle_menu\\s_chipotle_menu.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "115eacb6-9f94-462a-8402-8f6196b575a9",
+            "Value": {
+                "id": "bdf93591-161a-42b9-8cbe-38a5d6f7b0db",
+                "resourcePath": "views\\115eacb6-9f94-462a-8402-8f6196b575a9.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -186,7 +194,7 @@
             "Key": "2d55d9cb-1e66-4307-a785-52dd3b694c85",
             "Value": {
                 "id": "131af0ac-78ec-4761-ac6d-23229c7f9a41",
-                "resourcePath": "sprites\\s_nameplate\\s_nameplate.yy",
+                "resourcePath": "sprites\\s_nameplate_0\\s_nameplate_0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -394,7 +402,7 @@
             "Key": "888bd98e-718e-4e1d-9224-b8cc297d163c",
             "Value": {
                 "id": "d12dda76-7abf-4a51-916a-df67f4611c96",
-                "resourcePath": "sprites\\s_arrow\\s_arrow.yy",
+                "resourcePath": "sprites\\s_arrow_0\\s_arrow_0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -431,6 +439,14 @@
             }
         },
         {
+            "Key": "91d646a4-f456-4a01-ba3c-76908c610e53",
+            "Value": {
+                "id": "28f1967b-bae9-460c-8130-98750bc80b45",
+                "resourcePath": "datafiles_yy\\README.md.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "93dc6c8f-d824-4b72-81fc-73ef8af3e477",
             "Value": {
                 "id": "b3593524-e56e-4854-932c-1ef5b5d2daa5",
@@ -450,7 +466,7 @@
             "Key": "972ad513-e6c8-4f1a-a561-66ad897a1dfa",
             "Value": {
                 "id": "80516a96-0bdd-4d20-9eef-ddb9b881d012",
-                "resourcePath": "sprites\\s_dice\\s_dice.yy",
+                "resourcePath": "sprites\\s_dice_0\\s_dice_0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -466,7 +482,7 @@
             "Key": "99419442-481c-4a4c-b05d-7a235840bb9d",
             "Value": {
                 "id": "b300c09b-16e9-46e5-a71a-0fe727afc61c",
-                "resourcePath": "sprites\\s_checkmarkarrow\\s_checkmarkarrow.yy",
+                "resourcePath": "sprites\\s_checkmarkarrow_0\\s_checkmarkarrow_0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -679,6 +695,14 @@
             }
         },
         {
+            "Key": "d5d4b375-22a6-439c-a77b-8add48f49fa7",
+            "Value": {
+                "id": "45c4683f-d5cd-4600-998c-9c70d7dccba1",
+                "resourcePath": "views\\d5d4b375-22a6-439c-a77b-8add48f49fa7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "d7dd7cd5-c84d-469e-92ee-4c853d3e326f",
             "Value": {
                 "id": "56abb8bb-a2e4-4086-b86c-12bd85877001",
@@ -855,6 +879,14 @@
             }
         },
         {
+            "Key": "f8c73781-a7a9-47d6-9662-1d54ffe7a4fb",
+            "Value": {
+                "id": "90ca072b-5f46-4731-870c-7dc7c488323d",
+                "resourcePath": "objects\\o_header\\o_header.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fad4ac5a-da4c-4104-97e2-71ff4f8eed22",
             "Value": {
                 "id": "31f56df4-8ee6-4218-b0b4-70a6d2bc4361",
@@ -866,7 +898,7 @@
             "Key": "fb2cef11-676e-416e-b0ef-e85abc596b73",
             "Value": {
                 "id": "b9e1e701-a7d6-4bf5-b0fb-80889a1695ec",
-                "resourcePath": "sprites\\s_checkbox\\s_checkbox.yy",
+                "resourcePath": "sprites\\s_checkbox_0\\s_checkbox_0.yy",
                 "resourceType": "GMSprite"
             }
         },

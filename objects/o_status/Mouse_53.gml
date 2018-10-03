@@ -1,4 +1,4 @@
-if mouseover
+if mouseover and ((o_controller.profile = statusid) or o_controller.admin = 1)
 {
 	if !menuclick
 	{
@@ -6,7 +6,10 @@ if mouseover
 		{
 			with o_status_menu
 			{
-				instance_destroy()	
+				if statusmenuid = other.statusid
+				{
+					instance_destroy()	
+				}
 			}
 		}
 		else 
@@ -21,7 +24,7 @@ if mouseover
 		}
 	}
 }
-if !mouseover
+else
 {
 	if !menuclick
 	{
