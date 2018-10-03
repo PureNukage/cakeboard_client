@@ -503,14 +503,6 @@
             }
         },
         {
-            "Key": "9f94615f-780d-47b8-ad50-5aa296453bb3",
-            "Value": {
-                "id": "84dafd0c-e70f-4845-94d0-14aa0d0b5d06",
-                "resourcePath": "scripts\\scr_client_manageusers\\scr_client_manageusers.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "a0d76a96-5e34-423d-aee6-58532a60a8f4",
             "Value": {
                 "id": "5689f7d9-1466-40ee-a070-c031a7881b7e",
@@ -807,14 +799,6 @@
             }
         },
         {
-            "Key": "ed9b58a7-62b2-48ac-9166-53d54d876998",
-            "Value": {
-                "id": "375564fe-9e89-4cf0-b402-e29f72a66f31",
-                "resourcePath": "objects\\o_manageuser_save\\o_manageuser_save.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "edfff534-3bfd-437f-8d69-760f21c4ef6e",
             "Value": {
                 "id": "fba74141-855f-4a12-86cc-01a42c0abbcd",
@@ -950,7 +934,6 @@
         "1a4461e9-d356-47bb-acca-03cbf5046853",
         "d0ac510f-d406-44ad-825e-0bbdb4096a17",
         "c9bdc44d-5862-4fe1-9c2c-37dc8419a5aa",
-        "9f94615f-780d-47b8-ad50-5aa296453bb3",
         "36dd77a3-855c-46d0-a346-0c83622ac85b",
         "b4b71b44-53b2-4e9c-9256-93df418f85ef",
         "954558ea-4150-4353-866d-a9209a0df7b1",

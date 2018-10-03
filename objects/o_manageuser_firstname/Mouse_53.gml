@@ -15,10 +15,13 @@ if mouseover
 		text = _text
 		_text = ""
 		keyboard_string = ""
-		with o_client	//Send data
+		if imagealpha = 1
 		{
-			scr_client_manageusers_change(other.ID,other.object_index,other.text)
-		}	
+			with o_client	//Send data
+			{
+				scr_client_manageusers_change(other.ID,other.object_index,other.text)
+			}
+		}
 	}
 }
 else
@@ -29,9 +32,12 @@ else
 		text = _text
 		_text = ""
 		keyboard_string = ""
-		with o_client	//Send data
+		if imagealpha = 1
 		{
-			scr_client_manageusers_change(other.ID,other.object_index,other.text)
+			with o_client	//Send data
+			{
+				scr_client_manageusers_change(other.ID,other.object_index,other.text)
+			}
 		}
 	}
 }	

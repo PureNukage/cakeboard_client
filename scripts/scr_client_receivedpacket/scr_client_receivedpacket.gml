@@ -215,7 +215,6 @@ switch(msgid)
 			with o_manageuser_windowsname{	instance_destroy()	}
 			with o_manageuser_admin{	instance_destroy()	}
 			with o_manageuser_remove{	instance_destroy()	}	
-			with o_manageuser_save{	instance_destroy()	}
 			with o_back{	instance_destroy()	}
 			instance_create_layer(544,128,"Instances",o_manageuser_controller)
 		}
@@ -284,7 +283,6 @@ switch(msgid)
 			with o_manageuser_windowsname{	instance_destroy()	}
 			with o_manageuser_admin{	instance_destroy()	}
 			with o_manageuser_remove{	instance_destroy()	}	
-			with o_manageuser_save{	instance_destroy()	}
 			with o_back{	instance_destroy()	}
 			instance_create_layer(544,128,"Instances",o_manageuser_controller)
 		}	
