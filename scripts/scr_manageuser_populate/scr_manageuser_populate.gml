@@ -28,8 +28,8 @@ for (i=0;i<o_controller.totalusers+1;i++)
 	_nameplate.ID = i
 	if i < o_controller.totalusers
 	{
-		_nameplate.text = ds_list_find_value(o_controller.userlist,i)
-		_nameplate.text_initial = ds_list_find_value(o_controller.userlist,i)
+		_nameplate.text = ds_list_find_value(o_controller.database_names,i)
+		_nameplate.text_initial = ds_list_find_value(o_controller.database_names,i)
 	}
 	else
 	{
@@ -46,8 +46,8 @@ for (i=0;i<o_controller.totalusers+1;i++)
 	_windowsname.ID = i
 	if i < o_controller.totalusers
 	{
-		_windowsname.text = ds_list_find_value(o_controller.windowsnames,i)
-		_windowsname.text_initial = ds_list_find_value(o_controller.windowsnames,i)
+		_windowsname.text = ds_list_find_value(o_controller.database_windowsnames,i)
+		_windowsname.text_initial = ds_list_find_value(o_controller.database_windowsnames,i)
 	}
 	else
 	{
@@ -64,8 +64,8 @@ for (i=0;i<o_controller.totalusers+1;i++)
 	_admin.ID = i
 	if i < o_controller.totalusers
 	{
-		_admin.toggle = ds_list_find_value(o_controller.adminrights,i)
-		_admin.toggle_initial = ds_list_find_value(o_controller.adminrights,i)
+		_admin.toggle = ds_list_find_value(o_controller.database_adminrights,i)
+		_admin.toggle_initial = ds_list_find_value(o_controller.database_adminrights,i)
 	}
 	else
 	{
@@ -125,5 +125,4 @@ if o_controller.freshboard = true
 	_y += 56
 }
 
-instance_create_layer(_x+200,_y+128,"Instances",o_manageuser_save)
 instance_create_layer(_x+340,_y+128,"Instances",o_back)

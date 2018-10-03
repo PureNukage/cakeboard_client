@@ -19,7 +19,7 @@ for (i=0;i < o_controller.totalusers;i++)
 {
 	//Checkmark Box
 	currentcheckbox = instance_create_layer(checkboxX,checkboxY,"Instances",o_checkbox)
-	checkmark = ds_list_find_value(o_controller.checkmarklist,i)
+	checkmark = ds_list_find_value(o_controller.database_checkmark,i)
 	with currentcheckbox
 	{
 		ID = i
@@ -29,7 +29,7 @@ for (i=0;i < o_controller.totalusers;i++)
 	
 	//Nameplates
 	currentname = instance_create_layer(nameplateX,nameplateY,"Instances",o_nameplate)
-	namesearch = ds_list_find_value(o_controller.userlist,i)
+	namesearch = ds_list_find_value(o_controller.database_names,i)
 	with currentname
 	{	
 		nameid = i
@@ -39,7 +39,7 @@ for (i=0;i < o_controller.totalusers;i++)
 	
 	//Status Plates
 	currentstatus = instance_create_layer(statusX,statusY,"Instances",o_status)
-	statussearch = ds_list_find_value(o_controller.currentstatuslist,i)
+	statussearch = ds_list_find_value(o_controller.database_statuses,i)
 	with currentstatus
 	{
 		statusid = i
@@ -49,7 +49,7 @@ for (i=0;i < o_controller.totalusers;i++)
 	
 	//Textboxes
 	currenttextbox = instance_create_layer(textboxX,textboxY,"Instances",o_textbox)
-	textboxsearch = ds_list_find_value(o_controller.textboxlist,i)
+	textboxsearch = ds_list_find_value(o_controller.database_textbox,i)
 	with currenttextbox
 	{
 		textboxid = i
@@ -59,7 +59,7 @@ for (i=0;i < o_controller.totalusers;i++)
 	
 	//Time
 	currenttime = instance_create_layer(timeX,timeY,"Instances",o_time)
-	timesearch = ds_list_find_value(o_controller.timelist,i)
+	timesearch = ds_list_find_value(o_controller.database_time,i)
 	with currenttime
 	{
 		timeid = i

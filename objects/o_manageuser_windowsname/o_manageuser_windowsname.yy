@@ -4,7 +4,26 @@
     "mvc": "1.0",
     "name": "o_manageuser_windowsname",
     "eventList": [
-        
+        {
+            "id": "6732848d-db17-4752-9915-e0e9285e4f94",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 53,
+            "eventtype": 6,
+            "m_owner": "3c261078-a11f-4cd0-8dab-6e79cdb398eb"
+        },
+        {
+            "id": "2096b1e4-3dc6-44ae-8364-ddf916bcdb1e",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "3c261078-a11f-4cd0-8dab-6e79cdb398eb"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

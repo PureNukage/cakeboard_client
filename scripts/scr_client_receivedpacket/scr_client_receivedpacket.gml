@@ -33,29 +33,29 @@ switch(msgid)
 		with o_controller
 		{
 			totalusers = _totalusers
-			userlist = ds_list_create()
+			database_names = ds_list_create()
 			statuslist = ds_list_create()
-			currentstatuslist = ds_list_create()
-			textboxlist = ds_list_create()
-			timelist = ds_list_create()
-			checkmarklist = ds_list_create()
-			windowsnames = ds_list_create()
-			adminrights = ds_list_create()
+			database_statuses = ds_list_create()
+			database_textbox = ds_list_create()
+			database_time = ds_list_create()
+			database_checkmark = ds_list_create()
+			database_windowsnames = ds_list_create()
+			database_adminrights = ds_list_create()
 		
 		
-			ds_list_read(userlist,_compileduserlist)
+			ds_list_read(database_names,_compileduserlist)
 			ds_list_read(statuslist,_compiledstatuslist)
-			ds_list_read(currentstatuslist,_compiledcurrentstatuslist)
-			ds_list_read(textboxlist,_compiledtextboxlist)
-			ds_list_read(timelist,_compiledtimelist)
-			ds_list_read(checkmarklist,_compiledcheckmarklist)
-			ds_list_read(windowsnames,_compiledwindowsnamelist)
-			ds_list_read(adminrights,_compiledadminrightslist)
+			ds_list_read(database_statuses,_compiledcurrentstatuslist)
+			ds_list_read(database_textbox,_compiledtextboxlist)
+			ds_list_read(database_time,_compiledtimelist)
+			ds_list_read(database_checkmark,_compiledcheckmarklist)
+			ds_list_read(database_windowsnames,_compiledwindowsnamelist)
+			ds_list_read(database_adminrights,_compiledadminrightslist)
 			
 			//Do I have admin rights?
 			with o_controller
 			{
-				var _admin = ds_list_find_value(adminrights,profile)
+				var _admin = ds_list_find_value(database_adminrights,profile)
 				if _admin = "undefined"{
 					admin = -1 //Guest			
 				}
@@ -83,8 +83,8 @@ switch(msgid)
 		_status = buffer_read(read_buffer,buffer_u32) 
 		_time = buffer_read(read_buffer,buffer_string)
 		
-		ds_list_replace(o_controller.currentstatuslist,_statusid,_status)
-		ds_list_replace(o_controller.timelist,_statusid,_time)
+		ds_list_replace(o_controller.database_statuses,_statusid,_status)
+		ds_list_replace(o_controller.database_time,_statusid,_time)
 		
 		with o_status
 		{
@@ -163,7 +163,7 @@ switch(msgid)
 	var _selected = buffer_read(read_buffer,buffer_u32)
 	var _ID = buffer_read(read_buffer,buffer_u32)
 	
-	ds_list_replace(o_controller.checkmarklist,_ID,_selected)
+	ds_list_replace(o_controller.database_checkmark,_ID,_selected)
 	
 	with o_checkbox
 	{
@@ -183,74 +183,41 @@ switch(msgid)
 	#endregion
 	case 8:
 	#region ManageUsers Update
-		var _compiled_list_firstname_ID, _compiled_list_firstname_value, _compiled_list_windowsname_ID,
-		_compiled_list_windowsname_value, _compiled_list_admin_ID, _compiled_list_admin_value,
-		_list_firstname_ID, _list_firstname_value, _list_windowsname_ID, _list_windowsname_value,
-		_list_admin_ID, _list_admin_value, u, _ID, _value
-
-		_compiled_list_firstname_ID = buffer_read(read_buffer,buffer_string)
-		_compiled_list_firstname_value = buffer_read(read_buffer,buffer_string)
-		_compiled_list_windowsname_ID = buffer_read(read_buffer,buffer_string)
-		_compiled_list_windowsname_value = buffer_read(read_buffer,buffer_string)
-		_compiled_list_admin_ID = buffer_read(read_buffer,buffer_string)
-		_compiled_list_admin_value = buffer_read(read_buffer,buffer_string)	
+			
+		var _ID = buffer_read(read_buffer,buffer_u32)
+		var _section = buffer_read(read_buffer,buffer_string)
 		
-		_list_firstname_ID = ds_list_create()
-		_list_firstname_value = ds_list_create()
-		_list_windowsname_ID = ds_list_create()
-		_list_windowsname_value = ds_list_create()
-		_list_admin_ID = ds_list_create()
-		_list_admin_value = ds_list_create()
-
-		ds_list_read(_list_firstname_ID,_compiled_list_firstname_ID)
-		ds_list_read(_list_firstname_value,_compiled_list_firstname_value)
-		ds_list_read(_list_windowsname_ID,_compiled_list_windowsname_ID)
-		ds_list_read(_list_windowsname_value,_compiled_list_windowsname_value)
-		ds_list_read(_list_admin_ID,_compiled_list_admin_ID)
-		ds_list_read(_list_admin_value,_compiled_list_admin_value)
-		
-		if !ds_list_empty(_list_firstname_ID){
-			for (u=0;u<ds_list_size(_list_firstname_ID);u++)
-			{
-				_ID = ds_list_find_value(_list_firstname_ID,u)
-				_value = ds_list_find_value(_list_firstname_value,u)
-				
-				ds_list_replace(o_controller.userlist,_ID,_value)
-			}
-		}
-		if !ds_list_empty(_list_windowsname_ID){
-			show_debug_message("Windowsname list size: " + string(ds_list_size(_list_admin_ID)))
-			for (u=0;u<ds_list_size(_list_windowsname_ID);u++)
-			{
-				_ID = ds_list_find_value(_list_windowsname_ID,u)
-				_value = ds_list_find_value(_list_windowsname_value,u)
-				
-				ds_list_replace(o_controller.windowsnames,_ID,_value)
-			}
-		}
-		if !ds_list_empty(_list_admin_ID){
-			show_debug_message("Admin list size: " + string(ds_list_size(_list_admin_ID)))
-			for (u=0;u<ds_list_size(_list_admin_ID);u++)
-			{
-				_ID = ds_list_find_value(_list_admin_ID,u)
-				_value = ds_list_find_value(_list_admin_value,u)
-				
-				ds_list_replace(o_controller.adminrights,_ID,_value)
-			}
+		switch(_section)
+		{
+			case "names":
+				var _text = buffer_read(read_buffer,buffer_string)
+				ds_list_replace(o_controller.database_names,_ID,_text)
+			break;
+			case "windowsnames":
+				var _text = buffer_read(read_buffer,buffer_string)
+				ds_list_replace(o_controller.database_windowsnames,_ID,_text)
+			break;
+			case "adminrights":
+				var _admin = buffer_read(read_buffer,buffer_u32)
+				ds_list_replace(o_controller.database_adminrights,_ID,_admin)
+			break;
 		}
 		
-		//show_debug_message("6 Windowsname: " + string(ds_list_find_value(global.windowsnames,6)))
-		//show_debug_message("6 Adminrights: " + string(ds_list_find_value(global.adminrights,6)))
-		//show_debug_message("7 Windowsname: " + string(ds_list_find_value(global.windowsnames,7)))
-		//show_debug_message("7 Adminrights: " + string(ds_list_find_value(global.adminrights,7)))
-		
-		
+		if room = 0
+		{
+			with o_board_PARENT{	instance_destroy()	}
+			with o_controller{	scr_controller_populateboard()	}
+		}
 		if room = 1
 		{
-			with o_manageuser_controller
-			{
-				scr_manageuser_populate()
-			}
+			with o_manageuser_controller{	instance_destroy()	}
+			with o_manageuser_firstname{	instance_destroy()	}
+			with o_manageuser_windowsname{	instance_destroy()	}
+			with o_manageuser_admin{	instance_destroy()	}
+			with o_manageuser_remove{	instance_destroy()	}	
+			with o_manageuser_save{	instance_destroy()	}
+			with o_back{	instance_destroy()	}
+			instance_create_layer(544,128,"Instances",o_manageuser_controller)
 		}
 	
 	break;
@@ -275,23 +242,23 @@ switch(msgid)
 			}
 			else freshboard = false
 			
-			ds_list_clear(userlist)
+			ds_list_clear(database_names)
 			//ds_list_clear(statuslist)
-			ds_list_clear(currentstatuslist)
-			ds_list_clear(textboxlist)
-			ds_list_clear(timelist)
-			ds_list_clear(checkmarklist)
-			ds_list_clear(windowsnames)
-			ds_list_clear(adminrights)
+			ds_list_clear(database_statuses)
+			ds_list_clear(database_textbox)
+			ds_list_clear(database_time)
+			ds_list_clear(database_checkmark)
+			ds_list_clear(database_windowsnames)
+			ds_list_clear(database_adminrights)
 		
-			ds_list_read(userlist,_compiled_names)
+			ds_list_read(database_names,_compiled_names)
 			//ds_list_read(statuslist,_compiled_status)
-			ds_list_read(currentstatuslist,_compiled_status)
-			ds_list_read(textboxlist,_compiled_textbox)
-			ds_list_read(timelist,_compiled_time)
-			ds_list_read(checkmarklist,_compiled_checkmark)
-			ds_list_read(windowsnames,_compiled_windowsnames)
-			ds_list_read(adminrights,_compiled_adminrights)
+			ds_list_read(database_statuses,_compiled_status)
+			ds_list_read(database_textbox,_compiled_textbox)
+			ds_list_read(database_time,_compiled_time)
+			ds_list_read(database_checkmark,_compiled_checkmark)
+			ds_list_read(database_windowsnames,_compiled_windowsnames)
+			ds_list_read(database_adminrights,_compiled_adminrights)
 			
 		}
 				
