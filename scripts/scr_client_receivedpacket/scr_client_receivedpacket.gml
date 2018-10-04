@@ -114,7 +114,7 @@ switch(msgid)
 		_textboxid = buffer_read(read_buffer,buffer_u32)
 		__text = buffer_read(read_buffer,buffer_string)
 		
-		ds_list_replace(o_controller.textboxlist,_textboxid,__text)
+		ds_list_replace(o_controller.database_textbox,_textboxid,__text)
 		
 		with o_textbox
 		{

@@ -4,6 +4,6 @@ if drawself != 0
 
 	if selected = true
 	{
-		draw_sprite(s_checkmarkarrow,0,x,y)	
+		draw_sprite(s_checkmarkarrow_0,0,x,y)	
 	}
 }
