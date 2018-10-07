@@ -1,4 +1,4 @@
-if mouseover and ((o_controller.profile = statusid) or o_controller.admin = 1)
+if mouseover and (o_controller.profile = statusid or o_controller.admin = 1)
 {
 	if !menuclick
 	{

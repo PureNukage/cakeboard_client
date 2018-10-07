@@ -1,8 +1,8 @@
 {
-    "id": "af36fcb1-7923-46ed-abe5-4e1be8f51046",
+    "id": "5f424e2e-586d-450a-8576-fb59a621b780",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "scr_client_network_init",
+    "name": "scr_controller_camera_controlers",
     "IsCompatibility": false,
     "IsDnD": false
 }

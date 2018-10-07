@@ -5,7 +5,9 @@ if debug_on
 	draw_text(x+200,y+30,"Freshboard: " +string(freshboard))
 	draw_text(x+15,y+45,"User: " + string(environment_get_variable("USERNAME")))
 	draw_text(x+200,y+45,"Profile: " + string(profile))
+	draw_text(x+500,y+45,"Socket: " + string(o_client.socket))
 	draw_text(x+15,y+60,"Mouse_x: " + string(gui_x))
+	draw_text(x+500,y+60,"connected: " + string(o_client.connected))
 	draw_text(x+200,y+60,"Admin: " + string(admin))
 	draw_text(x+15,y+75,"Mouse_y: " + string(gui_y))
 	draw_text(x+15,y+90,"surface_x: " + string(surface_get_width(application_surface)))
@@ -49,8 +51,23 @@ if toolsopen = true{
 	}
 	else draw_set_color(c_gray)
 	draw_rectangle(menu_barX_1,menu_barY_1,118,menu_barY_1*2,false)
+	
+	
+	if admin = 1{
+		if mouseover_menu_diceroll{
+			draw_set_color(color_menu_highlighted)	
+		}
+		else draw_set_color(c_gray)
+		draw_rectangle(menu_barX_1,menu_barY_1*2,145,menu_barY_1*3,false)
+	}
+	
 	draw_set_color(c_black)
 	draw_text(58,menu_barY_1+2,menu_2_1_text)	// Themes
+	if admin = 1{
+		draw_text(58,menu_barY_1*2+2,menu_2_2_text)	//Dice Roll
+	}
+	
+	
 	#endregion
 }
 

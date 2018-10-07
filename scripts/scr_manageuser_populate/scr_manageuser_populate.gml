@@ -78,6 +78,7 @@ for (i=0;i<o_controller.totalusers+1;i++)
 	
 	_remove = instance_create_layer(_x,_y,"Instances",o_manageuser_remove)
 	_remove.ID = i
+	_remove.x += 30
 	if i < o_controller.totalusers{
 	}
 	else

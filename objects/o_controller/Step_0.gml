@@ -9,7 +9,8 @@ if window_has_focus()
 		
 	}
 }
-
+x = camera_get_view_x(camera)
+y = camera_get_view_y(camera)
 //Debug
 if f1{
 	o_controller.debug = !o_controller.debug	
@@ -22,6 +23,9 @@ if f2{
 		room_goto(board_0)
 	}
 }		
+
+////Camera
+//scr_controller_camera_controls()
 
 //Mouseclick
 if mouseclick > 0

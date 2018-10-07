@@ -2,7 +2,7 @@ if mouseover
 {
 	if instance_number(o_dice_menu) <= 0
 	{
-		scr_dicemenu()	
+		scr_dicemenu(x,y)	
 	}
 	else
 	{

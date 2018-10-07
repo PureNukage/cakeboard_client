@@ -335,6 +335,14 @@
             }
         },
         {
+            "Key": "5f424e2e-586d-450a-8576-fb59a621b780",
+            "Value": {
+                "id": "7c4b75ac-ccc3-45ea-b1c0-9d21f24c112f",
+                "resourcePath": "scripts\\scr_controller_camera_controls\\scr_controller_camera_controls.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "607694b8-88fe-4623-a88c-ad001dcb252f",
             "Value": {
                 "id": "69c9f92d-85bc-4897-8471-571e8592ec01",
@@ -619,6 +627,14 @@
             "Value": {
                 "id": "bc673de1-8c25-48e7-bb00-7440faf5efb1",
                 "resourcePath": "views\\bd6ecc5e-cbe0-49dc-b336-44de2f864bd7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c988a51d-11cd-46d6-83c2-204aa60b1d8b",
+            "Value": {
+                "id": "ee1de265-ff6a-4139-8522-cf5e439c1fad",
+                "resourcePath": "views\\c988a51d-11cd-46d6-83c2-204aa60b1d8b.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -937,8 +953,9 @@
         "36dd77a3-855c-46d0-a346-0c83622ac85b",
         "b4b71b44-53b2-4e9c-9256-93df418f85ef",
         "954558ea-4150-4353-866d-a9209a0df7b1",
-        "30541c6b-e7fa-4a6a-97c5-a612e68e199f",
         "a6903877-d725-4ce3-b810-8fbc028097b3",
+        "5f424e2e-586d-450a-8576-fb59a621b780",
+        "30541c6b-e7fa-4a6a-97c5-a612e68e199f",
         "a31b5b87-9233-4c70-8a93-2e9527411edc",
         "dd34d7b4-7bae-450d-bf31-2785d03bbeb6",
         "14ac2c5a-8260-4815-90bd-a62bd7c3b57c",

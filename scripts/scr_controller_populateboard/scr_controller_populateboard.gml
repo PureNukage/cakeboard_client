@@ -13,6 +13,17 @@ textboxY = y+164
 timeX = x+828
 timeY = y+164
 
+checkboxX = 176
+checkboxY = 164
+nameplateX = 224
+nameplateY = 164
+statusX = 368
+statusY = 164
+textboxX = 512
+textboxY = 164
+timeX = 828
+timeY = 164
+
 
 
 for (i=0;i < o_controller.totalusers;i++)

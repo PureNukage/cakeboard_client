@@ -7,7 +7,7 @@ draw_text(x+6,y+10,_text)
 draw_set_font(-1)
 
 //Debugging
-if debug_on
+if debug_on and mouseover
 {
 	draw_text(x+300,y,"keyboard_width: " + string(string_width(keyboard_string)))
 	draw_text(x+300,y+15,"_text_width: " + string(string_width(_text)))

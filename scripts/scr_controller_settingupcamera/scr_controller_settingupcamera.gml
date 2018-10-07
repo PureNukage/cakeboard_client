@@ -26,6 +26,18 @@ camera = camera_create_view(0,0,1024,800,0,-1,-1,-1,1024,800)
 
 aspect_ration = 1024/800
 
+zoom_level = 1
+default_zoom_width = camera_get_view_width(view_camera[0])
+default_zoom_height = camera_get_view_height(view_camera[0])
+
+///grab the width and height of view
+var cw = camera_get_view_width(view_camera);
+var ch = camera_get_view_height(view_camera);
+///set some variables to hold the value and div that by width and height
+display_scalex = display_get_gui_width()/cw;
+display_scaley = display_get_gui_height()/ch;
+
+
 //view_wport[0] *= aspect_ratio
 //view_hport[0] *= aspect_ratio
 
