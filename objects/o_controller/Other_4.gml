@@ -5,3 +5,5 @@ if roomprevious != board_0
 {
 	scr_controller_populateboard()
 }	
+
+room_height = roomheight

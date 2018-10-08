@@ -1,4 +1,4 @@
-if mouseover
+if mouseover and !instance_position(mouse_x,mouse_y,o_dice_menu)
 {
 	selected = !selected
 	if imagealpha < 1{

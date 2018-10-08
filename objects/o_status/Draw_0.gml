@@ -47,7 +47,7 @@ switch status
 		_quickbreak
 		statusfill
 		black
-		statusstatus = "Assembly"
+		statusstatus = "Quick Break"
 		statustext
 	break;
 	case 5:

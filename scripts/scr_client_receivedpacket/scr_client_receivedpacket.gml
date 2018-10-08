@@ -41,6 +41,7 @@ switch(msgid)
 			database_checkmark = ds_list_create()
 			database_windowsnames = ds_list_create()
 			database_adminrights = ds_list_create()
+			database_acquired = true
 		
 		
 			ds_list_read(database_names,_compileduserlist)
@@ -151,7 +152,8 @@ switch(msgid)
 			{
 				diceroll = ds_list_size(other.order)	
 				diceorder = other.order
-				instance_create_layer(0,0,"Instances",o_arrow)
+				var arrow = instance_create_layer(0,0,"Instances",o_arrow)
+				arrow.image_alpha = 0
 				show_debug_message("Diceroll: " + string(diceroll))
 			}
 		}
@@ -241,6 +243,10 @@ switch(msgid)
 			}
 			else freshboard = false
 			
+			if profile >= 0{
+				var _old_name = ds_list_find_value(database_windowsnames,profile)	
+			}
+			
 			ds_list_clear(database_names)
 			//ds_list_clear(statuslist)
 			ds_list_clear(database_statuses)
@@ -258,6 +264,15 @@ switch(msgid)
 			ds_list_read(database_checkmark,_compiled_checkmark)
 			ds_list_read(database_windowsnames,_compiled_windowsnames)
 			ds_list_read(database_adminrights,_compiled_adminrights)
+			
+			for (var i=0;i<totalusers;i++)
+			{
+				var _name = ds_list_find_value(database_windowsnames,i)
+				if _name = _old_name{
+					profile = i
+					i = totalusers
+				}	
+			}
 			
 		}
 				

@@ -2,7 +2,7 @@ if menuclick
 {
 	if mouseover
 	{
-		o_controller.mouseclick = 10
+		o_controller.mouseclick = 6
 		with o_status
 		{
 			if statusid = other.statusmenuid

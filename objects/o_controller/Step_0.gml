@@ -56,6 +56,7 @@ if diceroll > 0
 		}
 		with o_arrow
 		{
+			image_alpha = 1
 			x = other._x
 			y = other._y
 		}

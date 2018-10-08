@@ -13,6 +13,8 @@ freshboard = false
 profile = 0
 admin = 0
 theme = 0
+database_acquired = false
+roomheight = 1200
 
 #endregion
 
@@ -41,10 +43,11 @@ sprite_index=theme_select
 #macro debug_on o_controller.debug = true
 #macro debug_off o_controller.debug = false
 
+
 #macro statusfill draw_rectangle(x+1,y+1,x+126,y+46,false)
 #macro statustext draw_text(x+5,y+10,statusstatus)
 
-#macro statusmenufill draw_rectangle(x+1,y+1,x+85,y+39,false)
+#macro statusmenufill draw_rectangle(x+1,y+1,x+98,y+39,false)
 #macro statusmenutext draw_text(x+8,y+8,statusmenustatus)
 
 #macro theme_select o_controller.database_themes[o_controller.theme,object_index]

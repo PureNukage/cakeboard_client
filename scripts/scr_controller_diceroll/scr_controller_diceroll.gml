@@ -14,7 +14,7 @@ for (i=0;i<_length;i++)
 			_y = y
 		}
 	}
-	draw_sprite(s_arrow,0,_x-48,_y)
+	draw_sprite(s_arrow_0,0,_x-48,_y)
 	show_message("drawing arrow")
 	_time = irandom_range(20,60)
 	for (b=_time;b>0;b = b-1)
