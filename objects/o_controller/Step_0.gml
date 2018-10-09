@@ -17,6 +17,11 @@ if f1{
 }
 
 if f2{
+	if room = 0
+	{
+		roomprevious = room 
+		room_goto(manageuser_1)
+	}
 	if room = 1
 	{
 		roomprevious = room

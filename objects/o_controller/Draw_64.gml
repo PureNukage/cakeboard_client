@@ -2,7 +2,7 @@ if debug_on
 {
 	//draw_text(x+15,y+15,"Active Clients: " + string(global.activeclients))
 	draw_set_color(c_white)
-	draw_rectangle(5,5,505,505,false)
+	draw_rectangle(5,5,505,250,false)
 	draw_set_color(c_black)
 	draw_text(15,30,"Total Users: "+string(totalusers))
 	draw_text(200,30,"Freshboard: " +string(freshboard))
@@ -95,8 +95,8 @@ if admin = 1{
 	draw_text(118,2,menu_3_text)
 }
 
-if database_acquired = true{
-	var _name = ds_list_find_value(database_names,profile)
-	draw_text((window_get_width()-string_width(_name)-2),2,_name)
-}
+//if database_acquired = true and profile != -1{
+//	var _name = ds_list_find_value(database_names,profile)
+//	draw_text((window_get_width()-string_width(_name)-2),2,_name)
+//}
 

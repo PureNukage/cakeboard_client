@@ -66,6 +66,10 @@ switch(msgid)
 			if totalusers = 0{
 				freshboard = true
 			}
+			
+			var extraroomheight = totalusers * 80
+			roomheight = roomheight + extraroomheight
+			room_height = roomheight
 				
 			scr_controller_populateboard()		
 		}
