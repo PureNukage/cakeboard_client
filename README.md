@@ -47,5 +47,3 @@ s_nameplate_0 128x48
 s_status 128x48
 s_textbox 257x48
 s_arrow_0 64x48
-
-
