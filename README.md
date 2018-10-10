@@ -40,3 +40,12 @@ to the default sprite
 Inside of the object we wanted affected, add the following in the Create event:
 
 sprite_index=theme_select
+
+THEME SPRITE RESOLUTIONS
+s_tile_cakeboard (header) 580x120
+s_nameplate_0 128x48
+s_status 128x48
+s_textbox 257x48
+s_arrow_0 64x48
+
+
