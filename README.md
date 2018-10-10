@@ -1,5 +1,5 @@
 cakeboard_client
-
+<pre>
 
 How to add a new theme:
 
@@ -47,3 +47,5 @@ s_nameplate_0 128x48
 s_status 128x48
 s_textbox 257x48
 s_arrow_0 64x48
+
+</pre>
