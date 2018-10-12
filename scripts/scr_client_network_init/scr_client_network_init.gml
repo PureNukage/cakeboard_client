@@ -8,8 +8,8 @@ network_type = network_socket_tcp
 //	ipaddress = file_text_read_string(file2)
 //	file_text_close(file2)
 //}
-ipaddress =  "10.82.134.41" //"192.168.0.100"   "10.82.134.41"
-port = 64197 //64198
+ipaddress =  "10.82.100.45" //"192.168.0.100"   "10.82.134.41"
+port = 64198 //64198
 socket = network_create_socket(network_type)
 connected = network_connect(socket,ipaddress,port)
 
