@@ -24,17 +24,21 @@ database_themes[5,5] = 0
 database_themes[0,asset_get_index("o_nameplate")] = s_nameplate_0
 database_themes[0,asset_get_index("o_arrow")] = s_arrow_0
 database_themes[0,asset_get_index("o_textbox")] = s_textbox_0
-//database_themes[0,asset_get_index("o_dice")] = s_dice_0
 database_themes[0,asset_get_index("o_header")] = s_header_0
 database_themes[0,asset_get_index("o_controller")] = s_bg_0
 
 database_themes[1,asset_get_index("o_nameplate")] = s_nameplate_0
 database_themes[1,asset_get_index("o_arrow")] = s_arrow_1
 database_themes[1,asset_get_index("o_textbox")] = s_textbox_0
-//database_themes[0,asset_get_index("o_dice")] = s_dice_0
 database_themes[1,asset_get_index("o_header")] = s_header_1
 database_themes[1,asset_get_index("o_controller")] = s_bg_1
-theme_count = 2
+
+database_themes[2,asset_get_index("o_nameplate")] = s_nameplate_0
+database_themes[2,asset_get_index("o_arrow")] = s_arrow_2
+database_themes[2,asset_get_index("o_textbox")] = s_textbox_0
+database_themes[2,asset_get_index("o_header")] = s_header_2
+database_themes[2,asset_get_index("o_controller")] = s_bg_2
+theme_count = 3
 sprite_index=theme_select
 
 #endregion
