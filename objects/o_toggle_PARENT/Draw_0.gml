@@ -20,5 +20,6 @@ if debug_on
 	draw_text(x+30,y+30,"ID: " + string(ID))
 }	
 
+draw_set_font(-1)
 draw_set_alpha(1)
 

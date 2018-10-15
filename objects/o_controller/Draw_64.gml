@@ -58,6 +58,12 @@ if toolsopen = true{
 	else draw_set_color(c_gray)
 	draw_rectangle(menu_barX_1,menu_barY_1,118,menu_barY_1*2,false)
 	
+	if themesopen = true{
+		
+	}
+	
+	#endregion
+	
 	
 	if admin = 1{
 		if mouseover_menu_diceroll{
@@ -72,9 +78,6 @@ if toolsopen = true{
 	if admin = 1{
 		draw_text(58,menu_barY_1*2+2,menu_2_2_text)	//Dice Roll
 	}
-	
-	
-	#endregion
 }
 
 if adminopen = true{

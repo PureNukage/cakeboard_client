@@ -13,6 +13,7 @@ freshboard = false
 profile = 0
 admin = 0
 theme = 0
+theme_name[5] = 0
 database_acquired = false
 roomheight = 1200
 
@@ -26,18 +27,21 @@ database_themes[0,asset_get_index("o_arrow")] = s_arrow_0
 database_themes[0,asset_get_index("o_textbox")] = s_textbox_0
 database_themes[0,asset_get_index("o_header")] = s_header_0
 database_themes[0,asset_get_index("o_controller")] = s_bg_0
+theme_name[0] = "Default"
 
 database_themes[1,asset_get_index("o_nameplate")] = s_nameplate_0
 database_themes[1,asset_get_index("o_arrow")] = s_arrow_1
 database_themes[1,asset_get_index("o_textbox")] = s_textbox_0
 database_themes[1,asset_get_index("o_header")] = s_header_1
 database_themes[1,asset_get_index("o_controller")] = s_bg_1
+theme_name[1] = "Dark"
 
 database_themes[2,asset_get_index("o_nameplate")] = s_nameplate_0
 database_themes[2,asset_get_index("o_arrow")] = s_arrow_2
 database_themes[2,asset_get_index("o_textbox")] = s_textbox_0
 database_themes[2,asset_get_index("o_header")] = s_header_2
 database_themes[2,asset_get_index("o_controller")] = s_bg_2
+theme_name[2] = "Mario"
 theme_count = 3
 sprite_index=theme_select
 
@@ -73,6 +77,7 @@ sprite_index=theme_select
 fileopen = false			//These control if the menus are open or not
 toolsopen = false
 adminopen = false
+themesopen = false
 
 color_menu_highlighted = make_color_rgb(150,150,150)	//Color of the bar if its moused over
 menu_barY_0 = 0
@@ -97,6 +102,7 @@ menu_3_1_text = "Manage Users"					//	y = extended options
 #macro mouseover_menu_manageuser point_in_rectangle(gui_x,gui_y,menu_barX_2,menu_barY_1,230,menu_barY_1*2)
 #macro mouseover_menu_themes point_in_rectangle(gui_x,gui_y,menu_barX_1,menu_barY_1,menu_barX_2,menu_barY_1*2)
 #macro mouseover_menu_diceroll point_in_rectangle(gui_x,gui_y,menu_barX_1,menu_barY_1*2,145,menu_barY_1*3)
+#macro mouseover_themes_menu instance_position(mouse_x,mouse_y,o_theme_menu)
 
 #endregion
 
