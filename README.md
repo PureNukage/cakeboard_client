@@ -11,7 +11,8 @@ y = object that we want affected by themes functionality
 
 current themes:
 0 = default
-1 = 
+1 = Dark
+2 = Mario
 
 current objects affected by themes:
 o_nameplate
