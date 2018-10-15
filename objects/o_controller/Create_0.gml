@@ -25,7 +25,7 @@ database_themes[0,asset_get_index("o_nameplate")] = s_nameplate_0
 database_themes[0,asset_get_index("o_arrow")] = s_arrow_0
 database_themes[0,asset_get_index("o_textbox")] = s_textbox_0
 //database_themes[0,asset_get_index("o_dice")] = s_dice_0
-database_themes[0,asset_get_index("o_header")] = s_tile_cakeboard
+database_themes[0,asset_get_index("o_header")] = s_header_1
 database_themes[0,asset_get_index("o_controller")] = s_bg_1
 sprite_index=theme_select
 

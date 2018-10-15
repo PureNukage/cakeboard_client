@@ -154,7 +154,7 @@
             "Key": "1ed4e958-7394-42a2-938d-90b85576b903",
             "Value": {
                 "id": "48234564-f820-45c2-80d5-b17b5a6858fc",
-                "resourcePath": "sprites\\s_bg_1\\s_bg_1.yy",
+                "resourcePath": "sprites\\s_bg_0\\s_bg_0.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -260,6 +260,14 @@
                 "id": "27e882cb-eafc-4e3d-a511-d99c95441d74",
                 "resourcePath": "scripts\\scr_client_manageusers_addremove\\scr_client_manageusers_addremove.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "37100a30-3823-4af3-9d8f-4295b0c21f6f",
+            "Value": {
+                "id": "072d8992-4f5a-4fcf-b083-120898668235",
+                "resourcePath": "sprites\\s_header_1\\s_header_1.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -799,6 +807,14 @@
             }
         },
         {
+            "Key": "e54e0a25-f263-4483-877d-8616f7707f66",
+            "Value": {
+                "id": "6d2d8a05-94b4-408b-b6a5-db4db3b2ee3b",
+                "resourcePath": "sprites\\s_arrow_1\\s_arrow_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e6f9f5cc-8289-47ab-846c-d0c4049800b4",
             "Value": {
                 "id": "17ed13aa-e498-4c22-adb3-6321c4af251b",
@@ -855,6 +871,14 @@
             }
         },
         {
+            "Key": "ef386bb0-6951-43af-894c-9f058fdd3c3d",
+            "Value": {
+                "id": "8e10f74e-e771-4983-814b-aaa952f68f3f",
+                "resourcePath": "sprites\\s_bg_1\\s_bg_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ef77da5e-71bd-4d34-9b65-3bf2023091a5",
             "Value": {
                 "id": "9397c896-4ce7-4a27-aecd-b304c3d16ad7",
@@ -890,7 +914,7 @@
             "Key": "f4e9fe19-c9a0-4289-b7fe-593105fcac5e",
             "Value": {
                 "id": "7b552bca-0026-4b02-a53c-ab00deb7b8d7",
-                "resourcePath": "sprites\\s_tile_cakeboard\\s_tile_cakeboard.yy",
+                "resourcePath": "sprites\\s_header_0\\s_header_0.yy",
                 "resourceType": "GMSprite"
             }
         },
