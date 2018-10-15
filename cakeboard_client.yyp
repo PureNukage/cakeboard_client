@@ -175,19 +175,19 @@
             }
         },
         {
-            "Key": "24d1bcd8-69f4-4ca3-9d36-2ef8684257db",
-            "Value": {
-                "id": "1bdf1656-293e-4ab3-9629-247c88e0dae7",
-                "resourcePath": "scripts\\scr_theme\\scr_theme.yy",
-                "resourceType": "GMScript"
-            }
-        },
-        {
             "Key": "24d57388-c48c-4f9b-bd24-a5df7f9f233b",
             "Value": {
                 "id": "be35d3d5-aecf-4759-9154-9c1beae7fb1a",
                 "resourcePath": "rooms\\fawkes1\\fawkes1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "290ce603-def2-48f3-9b05-5e347aaf9e9c",
+            "Value": {
+                "id": "7705c01f-bbce-4445-831e-8b98a3b6852f",
+                "resourcePath": "scripts\\scr_theme_change\\scr_theme_change.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1012,7 +1012,7 @@
         "069b251e-36a5-4dff-91a2-09b6cbc87322",
         "a0d76a96-5e34-423d-aee6-58532a60a8f4",
         "9e8c46b0-48a2-41e4-b8a3-0731d9565c52",
-        "24d1bcd8-69f4-4ca3-9d36-2ef8684257db"
+        "290ce603-def2-48f3-9b05-5e347aaf9e9c"
     ],
     "tutorial": ""
 }

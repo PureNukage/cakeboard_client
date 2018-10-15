@@ -25,8 +25,16 @@ database_themes[0,asset_get_index("o_nameplate")] = s_nameplate_0
 database_themes[0,asset_get_index("o_arrow")] = s_arrow_0
 database_themes[0,asset_get_index("o_textbox")] = s_textbox_0
 //database_themes[0,asset_get_index("o_dice")] = s_dice_0
-database_themes[0,asset_get_index("o_header")] = s_header_1
-database_themes[0,asset_get_index("o_controller")] = s_bg_1
+database_themes[0,asset_get_index("o_header")] = s_header_0
+database_themes[0,asset_get_index("o_controller")] = s_bg_0
+
+database_themes[1,asset_get_index("o_nameplate")] = s_nameplate_0
+database_themes[1,asset_get_index("o_arrow")] = s_arrow_1
+database_themes[1,asset_get_index("o_textbox")] = s_textbox_0
+//database_themes[0,asset_get_index("o_dice")] = s_dice_0
+database_themes[1,asset_get_index("o_header")] = s_header_1
+database_themes[1,asset_get_index("o_controller")] = s_bg_1
+theme_count = 2
 sprite_index=theme_select
 
 #endregion
@@ -39,6 +47,8 @@ sprite_index=theme_select
 #macro control keyboard_check_pressed(vk_control)
 #macro c keyboard_check_pressed(ord("C"))
 #macro v keyboard_check_pressed(ord("V"))
+#macro right keyboard_check_pressed(vk_right)
+#macro left keyboard_check_pressed(vk_left)
 
 #macro debug_on o_controller.debug = true
 #macro debug_off o_controller.debug = false

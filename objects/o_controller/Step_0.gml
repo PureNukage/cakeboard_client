@@ -28,6 +28,14 @@ if f2{
 		room_goto(board_0)
 	}
 }		
+if right and (theme != theme_count - 1){
+	theme++	
+	scr_theme_change()
+}
+if left and (theme != 0){
+	theme--	
+	scr_theme_change()
+}
 
 ////Camera
 //scr_controller_camera_controls()
