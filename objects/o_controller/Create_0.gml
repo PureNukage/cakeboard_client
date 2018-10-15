@@ -42,7 +42,22 @@ database_themes[2,asset_get_index("o_textbox")] = s_textbox_0
 database_themes[2,asset_get_index("o_header")] = s_header_2
 database_themes[2,asset_get_index("o_controller")] = s_bg_2
 theme_name[2] = "Mario"
-theme_count = 3
+
+database_themes[3,asset_get_index("o_nameplate")] = s_nameplate_0
+database_themes[3,asset_get_index("o_arrow")] = s_arrow_3
+database_themes[3,asset_get_index("o_textbox")] = s_textbox_0
+database_themes[3,asset_get_index("o_header")] = s_header_3
+database_themes[3,asset_get_index("o_controller")] = s_bg_3
+theme_name[3] = "Princess"
+
+database_themes[4,asset_get_index("o_nameplate")] = s_nameplate_0
+database_themes[4,asset_get_index("o_arrow")] = s_arrow_4
+database_themes[4,asset_get_index("o_textbox")] = s_textbox_0
+database_themes[4,asset_get_index("o_header")] = s_header_4
+database_themes[4,asset_get_index("o_controller")] = s_bg_4
+theme_name[4] = "Sports"
+
+theme_count = 5
 sprite_index=theme_select
 
 #endregion

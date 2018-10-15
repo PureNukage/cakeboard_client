@@ -10,5 +10,5 @@ for(var i=0;i<theme_count;i++)
 	_theme.ID = i
 	_theme.text_on = theme_name[i]
 	_theme.text_off = theme_name[i]
-	_x += 88
+	_x += 102
 }
