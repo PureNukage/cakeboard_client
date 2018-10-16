@@ -30,6 +30,7 @@ for (i=0;i<o_controller.totalusers+1;i++)
 	{
 		_nameplate.text = ds_list_find_value(o_controller.database_names,i)
 		_nameplate.text_initial = ds_list_find_value(o_controller.database_names,i)
+		_nameplate.Font=font1
 	}
 	else
 	{
@@ -48,6 +49,7 @@ for (i=0;i<o_controller.totalusers+1;i++)
 	{
 		_windowsname.text = ds_list_find_value(o_controller.database_windowsnames,i)
 		_windowsname.text_initial = ds_list_find_value(o_controller.database_windowsnames,i)
+		_windowsname.Font=font1
 	}
 	else
 	{

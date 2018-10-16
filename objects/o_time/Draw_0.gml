@@ -1,8 +1,23 @@
-if o_controller.theme=4
+switch(o_controller.theme)
 {
-draw_set_color(c_white)
+	case 0:
+	case 2:
+		draw_set_color(c_black)
+	break;
+
+	case 1:
+		draw_set_color(c_gray)
+	break;
+	case 3:
+		draw_set_color(c_black)
+	break;
+	case 4:
+		draw_set_color(c_white)
+	break;
+	case 5:
+		draw_set_color(c_white)
+	break;
 }
-else draw_set_color(c_black)
 
 draw_set_font(font1)
 draw_text(x-36,y+15,time)
