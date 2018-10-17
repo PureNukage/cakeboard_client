@@ -289,7 +289,7 @@ switch(msgid)
 					profile = i
 					i = totalusers
 				}
-				else _name = _old_name
+				else _name = "Guest"
 			}
 			
 		}

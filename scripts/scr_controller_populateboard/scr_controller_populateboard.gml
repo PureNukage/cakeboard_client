@@ -24,7 +24,7 @@ textboxY = 164
 timeX = 828
 timeY = 164
 
-
+var _y_distance = 80
 
 for (i=0;i < o_controller.totalusers;i++)
 {
@@ -36,7 +36,7 @@ for (i=0;i < o_controller.totalusers;i++)
 		ID = i
 		selected = checkmark
 	}
-	checkboxY += 80
+	checkboxY += _y_distance
 	
 	//Nameplates
 	currentname = instance_create_layer(nameplateX,nameplateY,"Instances",o_nameplate)
@@ -46,7 +46,7 @@ for (i=0;i < o_controller.totalusers;i++)
 		nameid = i
 		username = namesearch
 	}
-	nameplateY += 80
+	nameplateY += _y_distance
 	
 	//Status Plates
 	currentstatus = instance_create_layer(statusX,statusY,"Instances",o_status)
@@ -56,7 +56,7 @@ for (i=0;i < o_controller.totalusers;i++)
 		statusid = i
 		status = statussearch
 	}
-	statusY += 80
+	statusY += _y_distance
 	
 	//Textboxes
 	currenttextbox = instance_create_layer(textboxX,textboxY,"Instances",o_textbox)
@@ -66,7 +66,7 @@ for (i=0;i < o_controller.totalusers;i++)
 		textboxid = i
 		text = textboxsearch
 	}
-	textboxY += 80
+	textboxY += _y_distance
 	
 	//Time
 	currenttime = instance_create_layer(timeX,timeY,"Instances",o_time)
@@ -76,13 +76,13 @@ for (i=0;i < o_controller.totalusers;i++)
 		timeid = i
 		time = timesearch
 	}
-	timeY += 80
+	timeY += _y_distance
 	
 }
 
 if o_controller.totalusers = 0
 {
-	instance_create_layer(x+224,y+164,"Instances",o_freshboard)
+	instance_create_layer(224,164,"Instances",o_freshboard)
 }
 
 

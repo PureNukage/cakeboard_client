@@ -126,6 +126,9 @@ if database_acquired = true{
 	if profile != -1
 	{
 		_name = ds_list_find_value(database_names,profile)
+		if is_undefined(_name){
+			_name = "Guest"	
+		}
 	}
 	else _name = "Guest"
 		draw_text((window_get_width()-string_width(_name)-2),2,_name)
