@@ -121,8 +121,13 @@ if admin = 1{
 	draw_text(118,2,menu_3_text)
 }
 
-//if database_acquired = true and profile != -1{
-//	var _name = ds_list_find_value(database_names,profile)
-//	draw_text((window_get_width()-string_width(_name)-2),2,_name)
-//}
+if database_acquired = true{
+	var _name
+	if profile != -1
+	{
+		_name = ds_list_find_value(database_names,profile)
+	}
+	else _name = "Guest"
+		draw_text((window_get_width()-string_width(_name)-2),2,_name)
+}
 

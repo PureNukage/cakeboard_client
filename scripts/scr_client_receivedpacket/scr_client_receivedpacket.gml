@@ -6,7 +6,7 @@ switch(msgid)
 	case 0:
 	#region On Connection
 		var _totalusers = buffer_read(read_buffer,buffer_u32)
-		var _whoami = buffer_read(read_buffer,buffer_u32)
+		var _whoami = buffer_read(read_buffer,buffer_s16)
 		var _compileduserlist = buffer_read(read_buffer,buffer_string)
 		var _compiledstatuslist = buffer_read(read_buffer,buffer_string)
 		var _compiledcurrentstatuslist = buffer_read(read_buffer,buffer_string)
@@ -15,6 +15,8 @@ switch(msgid)
 		var _compiledcheckmarklist = buffer_read(read_buffer,buffer_string)
 		var _compiledwindowsnamelist = buffer_read(read_buffer,buffer_string)
 		var _compiledadminrightslist = buffer_read(read_buffer,buffer_string)
+		var _theme = buffer_read(read_buffer,buffer_u32)
+		
 		
 		//global.activeclients = buffer_read(read_buffer,buffer_u32)
 		
@@ -56,11 +58,21 @@ switch(msgid)
 			//Do I have admin rights?
 			with o_controller
 			{
-				var _admin = ds_list_find_value(database_adminrights,profile)
-				if _admin = "undefined"{
-					admin = -1 //Guest			
+				if o_controller.profile != -1{
+					var _admin = ds_list_find_value(database_adminrights,profile)
+					if _admin = "undefined"{
+						admin = -1 //Guest			
+					}
+					else admin = _admin
 				}
-				else admin = _admin
+				else _admin = 0
+			}
+			
+			//Theme
+			with o_controller
+			{
+				theme = _theme
+				scr_theme_change()
 			}
 			
 			if totalusers = 0{
@@ -250,6 +262,7 @@ switch(msgid)
 			if profile >= 0{
 				var _old_name = ds_list_find_value(database_windowsnames,profile)	
 			}
+			else var _old_name = "Guest"
 			
 			ds_list_clear(database_names)
 			//ds_list_clear(statuslist)
@@ -275,7 +288,8 @@ switch(msgid)
 				if _name = _old_name{
 					profile = i
 					i = totalusers
-				}	
+				}
+				else _name = _old_name
 			}
 			
 		}
