@@ -2,7 +2,9 @@
 if mouseover_menu_file{
 	fileopen = !fileopen
 }
-else fileopen = false
+else if !mouseover_menu_settings and !mouseover_menu_exit and fileopen = true{
+	fileopen = false
+}
 
 if mouseover_menu_tools{
 	toolsopen= !toolsopen
@@ -26,6 +28,16 @@ else if !mouseover_menu_manageuser{
 
 #endregion
 
+#region File Extended Menu
+
+if mouseover_menu_settings and fileopen = true{
+	
+}
+if mouseover_menu_exit and fileopen = true{
+	game_end()	
+}
+
+#endregion
 
 #region Admin Extended Menu
 
@@ -44,7 +56,7 @@ else
 {
 //adminopen = false
 //toolsopen = false
-fileopen = false
+//fileopen = false
 }
 
 #endregion

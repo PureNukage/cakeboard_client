@@ -9,7 +9,7 @@ if debug_on
 	draw_text(15,60,"Mouse_x: " + string(gui_x))
 	draw_text(15,75,"Mouse_y: " + string(gui_y))
 	draw_text(15,90,"Theme: " + string(theme))
-	draw_text(15,105,"sprite_index: " + string(sprite_index))
+	draw_text(15,105,"fileopen: " + string(fileopen))
 	draw_text(200,30,"Freshboard: " +string(freshboard))
 	draw_text(200,45,"Profile: " + string(profile))
 	draw_text(200,60,"Admin: " + string(admin))
@@ -48,10 +48,30 @@ else draw_set_color(c_gray)
 draw_rectangle(menu_barX_2,menu_barY_0,menu_barX_3,menu_barY_1,false)
 
 if fileopen = true{
-
+	#region Settings
+	if mouseover_menu_settings{
+		draw_set_color(color_menu_highlighted)	
+	}
+	else draw_set_color(c_gray)
+	draw_rectangle(menu_barX_0,menu_barY_1,menu_barX_1+26,menu_barY_1*2,false)
+	
+	#endregion
+	
+	#region Exit
+	if mouseover_menu_exit{
+		draw_set_color(color_menu_highlighted)	
+	}
+	else draw_set_color(c_gray)
+	draw_rectangle(menu_barX_0,menu_barY_1*2,48,menu_barY_1*3,false)
+	
+	#endregion
+	
+	draw_set_color(c_black)
+	draw_text(2,menu_barY_1,menu_1_1_text)	//Settings
+	draw_text(2,menu_barY_1*2,menu_1_2_text)	//Exit
 }
 if toolsopen = true{
-	#region themes
+	#region Themes
 	if mouseover_menu_themes{
 		draw_set_color(color_menu_highlighted)	
 	}
@@ -64,7 +84,7 @@ if toolsopen = true{
 	
 	#endregion
 	
-	
+	#region Diceroll
 	if admin = 1{
 		if mouseover_menu_diceroll{
 			draw_set_color(color_menu_highlighted)	
@@ -72,6 +92,7 @@ if toolsopen = true{
 		else draw_set_color(c_gray)
 		draw_rectangle(menu_barX_1,menu_barY_1*2,145,menu_barY_1*3,false)
 	}
+	#endregion
 	
 	draw_set_color(c_black)
 	draw_text(58,menu_barY_1+2,menu_2_1_text)	// Themes

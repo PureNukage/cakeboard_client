@@ -112,13 +112,17 @@ menu_barX_3 = 172								//  X is the horizonalness of the menu
 #macro gui_y device_mouse_y_to_gui(0)			//	Mouse X and Y values on the gui layer
 draw_set_font(-1)								//
 menu_1_text = "File"							//	
+menu_1_1_text = "Settings"						//
+menu_1_2_text = "Exit"							//
 menu_2_text = "Tools"							//	Text on the menu options
 menu_2_1_text = "Themes"						//	Naming convention is an array
 menu_2_2_text = "Dice Roll"						//
 menu_3_text = "Admin"							//	x = header options
 menu_3_1_text = "Manage Users"					//	y = extended options
 
-#macro mouseover_menu_file point_in_rectangle(gui_x,gui_y,menu_barX_0,menu_barY_0,menu_barX_1,menu_barY_1)				
+#macro mouseover_menu_file point_in_rectangle(gui_x,gui_y,menu_barX_0,menu_barY_0,menu_barX_1,menu_barY_1)	
+#macro mouseover_menu_settings point_in_rectangle(gui_x,gui_y,menu_barX_0,menu_barY_1,menu_barX_1+26,menu_barY_1*2)
+#macro mouseover_menu_exit point_in_rectangle(gui_x,gui_y,menu_barX_0,menu_barY_1*2,48,menu_barY_1*3)
 #macro mouseover_menu_tools point_in_rectangle(gui_x,gui_y,menu_barX_1,menu_barY_0,menu_barX_2,menu_barY_1)
 #macro mouseover_menu_admin point_in_rectangle(gui_x,gui_y,menu_barX_2,menu_barY_0,menu_barX_3,menu_barY_1)
 #macro mouseover_menu_manageuser point_in_rectangle(gui_x,gui_y,menu_barX_2,menu_barY_1,230,menu_barY_1*2)
