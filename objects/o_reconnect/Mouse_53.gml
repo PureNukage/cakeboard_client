@@ -1,6 +1,6 @@
 if mouseover{
-	with o_client{	instance_destroy()	}
-	instance_create_layer(0,0,"Instances",o_client)
+	instance_destroy(o_client)
+	instance_create_layer(5,5,"Instances",o_client)
 	with o_client{	
 		persistent = true
 		ipaddress = o_ipaddress.text

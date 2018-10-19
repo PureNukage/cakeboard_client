@@ -13,8 +13,12 @@ if debug_on
 	draw_text(200,30,"Freshboard: " +string(freshboard))
 	draw_text(200,45,"Profile: " + string(profile))
 	draw_text(200,60,"Admin: " + string(admin))
-	draw_text(500,45,"Socket: " + string(o_client.socket))
-	draw_text(500,60,"connected: " + string(o_client.connected))
+	draw_text(200,75,"clients: " + string(instance_number(o_client)))
+	if instance_exists(o_client){
+		//draw_text(200,90,"Socket: " + string(o_client.socket))
+		//draw_text(200,105,"connected: " + string(o_client.connected))
+		//draw_text(200,120,"persistence: "+string(o_client.persistent))
+	}
 	//draw_text(200,75,"lerp: " + string(o_scrollbar._lerp))
 	//draw_text(15,90,"surface_x: " + string(surface_get_width(application_surface)))
 	//draw_text(15,105,"surface_y: " + string(surface_get_height(application_surface)))
