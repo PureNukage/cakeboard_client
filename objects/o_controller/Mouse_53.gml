@@ -8,6 +8,7 @@ else if !mouseover_menu_settings and !mouseover_menu_exit and fileopen = true{
 
 if mouseover_menu_tools{
 	toolsopen= !toolsopen
+	if instance_number(o_dice_menu) > 0 {	with o_dice_menu {	instance_destroy()	}}
 }
 else if !mouseover_menu_diceroll and !mouseover_menu_themes and !mouseover_themes_menu and toolsopen = true{
 	if !instance_position(mouse_x,mouse_y,o_dice_menu){		
@@ -31,7 +32,9 @@ else if !mouseover_menu_manageuser{
 #region File Extended Menu
 
 if mouseover_menu_settings and fileopen = true{
-	
+	room_goto(settings_2)
+	roomprevious = room 
+	fileopen = false
 }
 if mouseover_menu_exit and fileopen = true{
 	game_end()	

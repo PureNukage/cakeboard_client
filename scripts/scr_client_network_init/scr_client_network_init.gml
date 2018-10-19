@@ -1,3 +1,8 @@
+/// @func scr_client_network_init()
+/// @desc
+/// @param ipaddress
+/// @param port
+
 var _ip = argument[0]
 var _port = argument[1]
 

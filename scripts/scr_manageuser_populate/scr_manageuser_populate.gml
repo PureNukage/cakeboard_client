@@ -3,22 +3,6 @@ var i, _x, _y, _nameplate, _windowsname, _admin, _remove, _add
 _x = x
 _y = y
 
-//if instance_number(o_manageuser_firstname) > 0
-//{
-//	with o_manageuser_firstname
-//	{
-//		instance_destroy()
-//	}
-//	with o_manageuser_windowsname
-//	{
-//		instance_destroy()
-//	}
-//	with o_manageuser_admin
-//	{
-//		instance_destroy()	
-//	}
-//}
-
 if o_controller.freshboard = false
 {
 for (i=0;i<o_controller.totalusers+1;i++)

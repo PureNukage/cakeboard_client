@@ -82,8 +82,10 @@ switch(msgid)
 			var extraroomheight = totalusers * 80
 			roomheight = roomheight + extraroomheight
 			room_height = roomheight
-				
-			scr_controller_populateboard()		
+			
+			if room = board_0{
+				scr_controller_populateboard()		
+			}
 		}
 		
 		//with o_connection_light{
