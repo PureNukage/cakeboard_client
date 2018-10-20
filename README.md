@@ -13,6 +13,9 @@ current themes:
 0 = default
 1 = Dark
 2 = Mario
+3 = Princess
+4 = Sports
+5 = Rick and Morty
 
 When a new theme is added, MAKE SURE the variable "theme_count" is updated accordingly
 found in o_controller -> Create -> Region THEMES
