@@ -1,6 +1,13 @@
 cakeboard_client
 <pre>
 
+Make sure to be running the server first
+https://github.com/PureNukage/cakeboard_server/tree/beta
+
+///////////////////
+///    THEMES   ///
+///////////////////
+
 How to add a new theme:
 
 Inside of o_controller Create -> Section Themes, we are going to add our theme to the Array database
