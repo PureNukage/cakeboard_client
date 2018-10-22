@@ -227,12 +227,12 @@ switch(msgid)
 			break;
 		}
 		
-		if room = 0
+		if room = board_0
 		{
 			with o_board_PARENT{	instance_destroy()	}
 			with o_controller{	scr_controller_populateboard()	}
 		}
-		if room = 1
+		if room = manageuser_1
 		{
 			with o_manageuser_controller{	instance_destroy()	}
 			with o_manageuser_firstname{	instance_destroy()	}

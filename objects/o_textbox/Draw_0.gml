@@ -1,6 +1,7 @@
 draw_self()
 //Draw Text
 //text = string_insert("|",text,cursor)
+draw_set_color(c_black)
 draw_set_font(font)
 draw_text(x+6,y+10,text)
 draw_text(x+6,y+10,_text)
