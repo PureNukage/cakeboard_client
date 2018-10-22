@@ -44,6 +44,7 @@ switch(msgid)
 			database_windowsnames = ds_list_create()
 			database_adminrights = ds_list_create()
 			database_acquired = true
+			connection = true
 		
 		
 			ds_list_read(database_names,_compileduserlist)
@@ -123,6 +124,9 @@ switch(msgid)
 	#endregion
 	case 2:
 	#region Active Connection
+		with o_controller{
+			returned = true	
+		}
 		
 	break;
 	#endregion

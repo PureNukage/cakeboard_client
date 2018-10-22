@@ -28,17 +28,29 @@ if f2{
 		room_goto(board_0)
 	}
 }		
-//if right and (theme != theme_count - 1){
-//	theme++	
-//	scr_theme_change()
-//}
-//if left and (theme != 0){
-//	theme--	
-//	scr_theme_change()
-//}
-
-////Camera
-//scr_controller_camera_controls()
+//Active Connection
+if timer > 0{
+	timer--	
+	if timer = 30{
+		if sent = true{
+			if returned = true{
+				connection = true
+			}
+			else{
+				connection = false
+			}
+			sent = false
+			returned = false
+		}
+	}
+}
+else{
+	with o_client{
+		scr_client_activeconnection()
+	}
+	timer = 60
+	sent = true
+}
 
 //Mouseclick
 if mouseclick > 0

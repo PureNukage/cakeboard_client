@@ -1,3 +1,4 @@
+#region Debug/Console
 if debug_on
 {
 	//draw_text(x+15,y+15,"Active Clients: " + string(global.activeclients))
@@ -10,6 +11,7 @@ if debug_on
 	draw_text(15,75,"Mouse_y: " + string(gui_y))
 	draw_text(15,90,"Theme: " + string(theme))
 	draw_text(15,105,"fileopen: " + string(fileopen))
+	draw_text(15,120,"timer: "+string(timer))
 	draw_text(200,30,"Freshboard: " +string(freshboard))
 	draw_text(200,45,"Profile: " + string(profile))
 	draw_text(200,60,"Admin: " + string(admin))
@@ -19,14 +21,8 @@ if debug_on
 		//draw_text(200,105,"connected: " + string(o_client.connected))
 		//draw_text(200,120,"persistence: "+string(o_client.persistent))
 	}
-	//draw_text(200,75,"lerp: " + string(o_scrollbar._lerp))
-	//draw_text(15,90,"surface_x: " + string(surface_get_width(application_surface)))
-	//draw_text(15,105,"surface_y: " + string(surface_get_height(application_surface)))
-	
-	//Menu Debug
-	//draw_text(menu_barX_1,menu_barY_1*6,"themes width: " + string(string_width(menu_2_1_text)))
-	//draw_text(menu_barX_2,menu_barY_1*7,"manage users width: " + string(string_width(menu_3_1_text)))
 }	
+#endregion
 
 //Menu Bar
 draw_set_color(c_gray)
@@ -136,5 +132,12 @@ if database_acquired = true{
 	}
 	else _name = "Guest"
 		draw_text((window_get_width()-string_width(_name)-2),2,_name)
+
+//Active Connection
+if connection = true{
+	draw_sprite(s_connection_connected,0,window_get_width()-string_width(_name)-28,0)
+}
+else draw_sprite(s_connection_disconnected,0,window_get_width()-string_width(_name)-28,0)
+
 }
 

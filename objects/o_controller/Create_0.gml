@@ -16,6 +16,10 @@ theme = 0
 theme_name[5] = 0
 database_acquired = false
 roomheight = 1200
+timer = 60
+connection = false
+sent = false
+returned = false
 
 #endregion
 
