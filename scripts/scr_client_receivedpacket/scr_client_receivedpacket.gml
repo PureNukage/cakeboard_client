@@ -329,4 +329,15 @@ switch(msgid)
 	
 	break;
 	#endregion
+	case 10:
+	#region Updating Theme (unused Client side)
+	break;
+	#endregion
+	case 66:
+	#region Order 66
+		
+		game_end()
+		
+	break;
+	#endregion
 }

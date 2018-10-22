@@ -23,7 +23,7 @@ else if !mouseover_menu_diceroll and !mouseover_menu_themes and !mouseover_theme
 if mouseover_menu_admin and admin = 1{
 	adminopen = !adminopen
 }
-else if !mouseover_menu_manageuser{
+else if !mouseover_menu_manageuser and !mouseover_menu_managerules{
 	adminopen = false
 }
 
@@ -45,14 +45,16 @@ if mouseover_menu_exit and fileopen = true{
 #region Admin Extended Menu
 
 if mouseover_menu_manageuser and adminopen = true{
-	if room = board_0
-	{
-		room_goto(manageuser_1)	
-		roomprevious = room
-		adminopen = false
-		//Backgrounds
-		scr_controller_background()
-	}
+	room_goto(manageuser_1)	
+	roomprevious = room
+	adminopen = false
+	//Backgrounds
+	scr_controller_background()	
+}
+if mouseover_menu_managerules and adminopen = true{
+	room_goto(managerules_3)
+	roomprevious = room 
+	adminopen = false
 }
 
 else

@@ -5,5 +5,6 @@ if roomprevious != board_0 and room = board_0
 {
 	scr_controller_populateboard()
 }	
-
-room_height = roomheight
+if (room = board_0) or (room = manageuser_1){
+	room_height = roomheight
+}

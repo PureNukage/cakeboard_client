@@ -17,12 +17,12 @@ if f1{
 }
 
 if f2{
-	if room = 0
+	if room = 1
 	{
 		roomprevious = room 
 		room_goto(manageuser_1)
 	}
-	if room = 1
+	if room = 2
 	{
 		roomprevious = room
 		room_goto(board_0)

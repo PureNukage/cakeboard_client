@@ -102,7 +102,7 @@ if toolsopen = true{
 }
 
 if adminopen = true{
-	#region manageuser
+	#region Manage User
 	if mouseover_menu_manageuser{
 		draw_set_color(color_menu_highlighted)	
 	}
@@ -110,6 +110,16 @@ if adminopen = true{
 	draw_rectangle(menu_barX_2,menu_barY_1,230,menu_barY_1*2,false)
 	draw_set_color(c_black)
 	draw_text(118,menu_barY_1+2,menu_3_1_text)	//Manage Users
+	#endregion
+	
+	#region Manage Rules
+	if mouseover_menu_managerules{
+		draw_set_color(color_menu_highlighted)	
+	}
+	else draw_set_color(c_gray)
+	draw_rectangle(menu_barX_2,menu_barY_1*2,230,menu_barY_1*3,false)
+	draw_set_color(c_black)
+	draw_text(118,menu_barY_1*2+2,menu_3_2_text)
 	#endregion
 	
 }
@@ -121,7 +131,8 @@ if admin = 1{
 	draw_text(118,2,menu_3_text)
 }
 
-if database_acquired = true{
+if database_acquired = true
+{
 	var _name
 	if profile != -1
 	{
@@ -131,13 +142,13 @@ if database_acquired = true{
 		}
 	}
 	else _name = "Guest"
-		draw_text((window_get_width()-string_width(_name)-2),2,_name)
+	
+	draw_text((window_get_width()-string_width(_name)-2),2,_name)
 
-//Active Connection
-if connection = true{
-	draw_sprite(s_connection_connected,0,window_get_width()-string_width(_name)-28,0)
-}
-else draw_sprite(s_connection_disconnected,0,window_get_width()-string_width(_name)-28,0)
-
+	//Active Connection
+	if connection = true{
+		draw_sprite(s_connection_connected,0,window_get_width()-string_width(_name)-28,0)
+	}
+	else draw_sprite(s_connection_disconnected,0,window_get_width()-string_width(_name)-28,0)
 }
 

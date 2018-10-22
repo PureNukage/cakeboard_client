@@ -2,7 +2,7 @@
 ID = 0								//Used with the server to identify which specific textbox
 toggle = 0							//Toggle between 0 and 1. Starts at 0
 imagealpha = 1						//Opacity
-Font = font1						//Font of the text
+Font = font2						//Font of the text
 
 /*
 

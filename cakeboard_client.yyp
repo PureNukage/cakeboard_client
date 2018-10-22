@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "261b9b67-739b-4960-bf13-a60e101e5fb8",
+            "Value": {
+                "id": "1f902fe0-0be5-4af9-8749-848204213ca4",
+                "resourcePath": "sprites\\s_theme_menu\\s_theme_menu.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "290ce603-def2-48f3-9b05-5e347aaf9e9c",
             "Value": {
                 "id": "7705c01f-bbce-4445-831e-8b98a3b6852f",
@@ -487,11 +495,27 @@
             }
         },
         {
+            "Key": "6bb7d406-130d-4b16-aadf-4e63e208e2ca",
+            "Value": {
+                "id": "aa37682b-5039-467d-8628-e57099a6bb5e",
+                "resourcePath": "views\\6bb7d406-130d-4b16-aadf-4e63e208e2ca.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "6d4eca71-ec11-41e8-81f1-a8d3cb0255cc",
             "Value": {
                 "id": "20321d14-e25b-4094-b652-851102a2faeb",
                 "resourcePath": "views\\6d4eca71-ec11-41e8-81f1-a8d3cb0255cc.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "7024a7d2-6c09-40b4-8ee1-d36d723c9c7f",
+            "Value": {
+                "id": "70aa1844-4a44-4be8-8b12-22ed8f317e29",
+                "resourcePath": "objects\\o_disablebreak\\o_disablebreak.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -532,6 +556,14 @@
                 "id": "d68085eb-04a1-487a-8c2c-b19a73e026a7",
                 "resourcePath": "objects\\o_textbox\\o_textbox.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7feb1c9e-6a1d-491c-9737-780e05817df4",
+            "Value": {
+                "id": "3d959714-a87c-4944-ac2c-0f643c180fa2",
+                "resourcePath": "rooms\\managerules_3\\managerules_3.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
@@ -604,6 +636,14 @@
                 "id": "28f1967b-bae9-460c-8130-98750bc80b45",
                 "resourcePath": "datafiles_yy\\README.md.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "92206950-3616-4475-950c-03fbb402097f",
+            "Value": {
+                "id": "f8e3ed81-f12d-4d0e-86be-c28793b1be5d",
+                "resourcePath": "objects\\o_quitclients\\o_quitclients.yy",
+                "resourceType": "GMObject"
             }
         },
         {
