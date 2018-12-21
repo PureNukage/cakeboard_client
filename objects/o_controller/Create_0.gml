@@ -52,7 +52,7 @@ database_themes[3,asset_get_index("o_arrow")] = s_arrow_3
 database_themes[3,asset_get_index("o_textbox")] = s_textbox_0
 database_themes[3,asset_get_index("o_header")] = s_header_3
 database_themes[3,asset_get_index("o_controller")] = s_bg_3
-theme_name[3] = "Princess"
+theme_name[3] = "Call of Duty"
 
 database_themes[4,asset_get_index("o_nameplate")] = s_nameplate_0
 database_themes[4,asset_get_index("o_arrow")] = s_arrow_4

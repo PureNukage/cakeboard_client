@@ -863,6 +863,14 @@
             }
         },
         {
+            "Key": "b804e6bf-d065-4941-ac98-9e604d065bf1",
+            "Value": {
+                "id": "c183c49c-4910-4bec-a9d8-a23d2871a00e",
+                "resourcePath": "sprites\\s_explosion\\s_explosion.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bd10fd5c-041b-4900-888a-da09b69c9707",
             "Value": {
                 "id": "c0e0d6a4-3751-4770-bea9-e18db29f157c",
