@@ -10,7 +10,7 @@ if o_controller.drawarrow = 2
 		var d = irandom_range(100,255)
 		image_blend = make_color_hsv(a,b,d)
 		image_alpha -= .01
-		if (sprite_index != s_explosion and image_alpha = 0) or (sprite_index == s_explosion and image_index > image_number - 2)
+		if (image_alpha = 0) or (sprite_index == s_explosion and image_index > image_number - 2)
 		{
 			if instance_number(o_arrow) > 0
 			{
