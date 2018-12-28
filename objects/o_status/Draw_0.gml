@@ -52,7 +52,7 @@ switch status
 	break;
 	case 5:
 	//Chipotle
-		draw_sprite(s_chipotle,0,x,y)
+		draw_sprite(chipotleSprite,0,x,y)
 		statusstatus = ""
 	break;
 }

@@ -9,5 +9,6 @@ if mouseover
 		}
 		with o_client{	scr_client_theme_change()	}
 		with o_theme_menu{ if ID != other.ID { toggle = 0 }}	
+		with o_status{ if status == 5 { chipotleSprite =  o_controller.database_themes_burrito[o_controller.theme]}}
 	}
 }		

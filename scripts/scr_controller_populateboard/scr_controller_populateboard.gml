@@ -55,6 +55,9 @@ for (i=0;i < o_controller.totalusers;i++)
 	{
 		statusid = i
 		status = statussearch
+		if status == 5{
+			chipotleSprite = o_controller.database_themes_burrito[o_controller.theme]
+		}
 	}
 	statusY += _y_distance
 	

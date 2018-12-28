@@ -80,6 +80,18 @@ sprite_index=theme_select
 
 #endregion
 
+#region Themes - Burrito
+
+database_themes_burrito[0] = s_chipotle
+database_themes_burrito[1] = s_chipotle_1
+database_themes_burrito[2] = s_chipotle_2
+database_themes_burrito[3] = s_chipotle_3
+database_themes_burrito[4] = s_chipotle_4
+database_themes_burrito[5] = s_chipotle_5
+database_themes_burrito[6] = s_chipotle_6
+
+#endregion
+
 #region Macros
 #macro mouseover instance_position(mouse_x,mouse_y,id)
 #macro menuclick instance_position(mouse_x,mouse_y,o_status_menu)

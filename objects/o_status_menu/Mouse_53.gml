@@ -7,6 +7,9 @@ if menuclick
 		{
 			if statusid = other.statusmenuid
 			{
+				if other.statusmenu == 5{
+					chipotleSprite = o_controller.database_themes_burrito[o_controller.theme]
+				}
 				status = other.statusmenu
 			}
 		}				

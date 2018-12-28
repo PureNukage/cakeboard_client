@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "56e50492-073c-405d-a83f-da4e261d5901",
+            "Value": {
+                "id": "9516d485-0843-466e-81ac-793d7a1f46e9",
+                "resourcePath": "sprites\\s_chipotle_6\\s_chipotle_6.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "57975bae-857e-4e84-9b00-358ba0abb397",
             "Value": {
                 "id": "e93b4457-2c7f-401e-97b2-cadf8656f8ec",
@@ -927,6 +935,14 @@
             }
         },
         {
+            "Key": "ca3cf2e9-91c0-4251-9fa7-16f7e10ec7be",
+            "Value": {
+                "id": "59466a6a-7db0-4721-9567-2e978b053134",
+                "resourcePath": "sprites\\s_chipotle_1\\s_chipotle_1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "cba42976-44b2-4b3f-b0be-d1d5e0bbbd5b",
             "Value": {
                 "id": "e8e4e973-0dd3-4c72-88ff-d81f361d57ad",
@@ -1139,6 +1155,14 @@
             "Value": {
                 "id": "363f97eb-2a3e-438e-9c35-5f12189134bd",
                 "resourcePath": "sprites\\s_pixel\\s_pixel.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ecd6d493-ee7f-4ec5-858a-88c10e6304cb",
+            "Value": {
+                "id": "10feba7f-e12a-45e4-af8c-8946286618a3",
+                "resourcePath": "sprites\\s_chipotle_2\\s_chipotle_2.yy",
                 "resourceType": "GMSprite"
             }
         },
