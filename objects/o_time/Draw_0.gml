@@ -17,6 +17,9 @@ switch(o_controller.theme)
 	case 5:
 		draw_set_color(c_white)
 	break;
+	case 6:
+		draw_set_color(c_white)
+	break;
 }
 
 draw_set_font(font1)

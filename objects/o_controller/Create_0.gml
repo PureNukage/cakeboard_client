@@ -68,7 +68,14 @@ database_themes[5,asset_get_index("o_header")] = s_header_5
 database_themes[5,asset_get_index("o_controller")] = s_bg_5
 theme_name[5] = "Rick & Morty"
 
-theme_count = 6
+database_themes[6,asset_get_index("o_nameplate")] = s_nameplate_0
+database_themes[6,asset_get_index("o_arrow")] = s_arrow_6
+database_themes[6,asset_get_index("o_textbox")] = s_textbox_0
+database_themes[6,asset_get_index("o_header")] = s_header_6
+database_themes[6,asset_get_index("o_controller")] = s_bg_6
+theme_name[6] = "Cat Galaxy"
+
+theme_count = 7
 sprite_index=theme_select
 
 #endregion
