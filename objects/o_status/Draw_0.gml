@@ -52,8 +52,13 @@ switch status
 	break;
 	case 5:
 	//Chipotle
-		draw_sprite(chipotleSprite,0,x,y)
-		statusstatus = ""
+		if chipotleSprite != s_chipotle_4 {
+			draw_sprite(chipotleSprite,0,x,y)
+			statusstatus = ""
+		} else {
+			image_speed = 1
+			draw_sprite(chipotleSprite,animation,x,y)
+		}
 	break;
 }
 draw_set_font(-1)
