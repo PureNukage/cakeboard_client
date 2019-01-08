@@ -1,5 +1,8 @@
 if o_controller.drawarrow = 2
 {
+	if sprite_index == s_arrow_4 {
+		image_speed = 1	
+	}
 	if sprite_index == s_arrow_3{
 		sprite_index = s_explosion
 		image_speed = 1
