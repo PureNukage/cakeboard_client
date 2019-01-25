@@ -11,3 +11,8 @@ At one point in time this was used by a department of 7.
 * Multiple themes including a dark theme, mario, call of duty, pokemon, rick and morty and a cat galaxy. 
 
 * A random-user-select ability, selects someone random from the board. We used it to draw straws for 'undesirable' tasks.  
+
+
+![Burrito GIF](https://github.com/PureNukage/cakeboard_client/blob/beta/burrito.gif)
+
+Easter Eggs - The most important feature of all
