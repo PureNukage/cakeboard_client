@@ -16,7 +16,7 @@ At one point in time this was used by a department of 7.
 
 * Multiple themes!
 
-### <details><summary>Themes</summary>
+<details><summary>Themes</summary>
 
 <img src="https://github.com/PureNukage/cakeboard_client/blob/beta/cakeboard_client_2019-01-25_10-10-56.png" width="400"> <img src="https://github.com/PureNukage/cakeboard_client/blob/beta/cakeboard_client_2019-01-25_10-11-10.png" width="400">
 <img src="https://github.com/PureNukage/cakeboard_client/blob/beta/cakeboard_client_2019-01-25_10-11-17.png" width="400">
@@ -30,7 +30,7 @@ At one point in time this was used by a department of 7.
 <p></p>
 <p></p>
 
-### <details><summary>Easter Egg!</summary>
+<details><summary>Easter Egg!</summary>
 
 <img src="https://github.com/PureNukage/cakeboard_client/blob/beta/burrito.gif" width="600">
 
