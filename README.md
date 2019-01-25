@@ -2,7 +2,7 @@
 
 This repo is for a client/server status board application written in GML (GameMaker Language)
 
-[CakeBoard Server](https://github.com/PureNukage/cakeboard_server)
+Requires a running [CakeBoard Server](https://github.com/PureNukage/cakeboard_server)
 
 At one point in time this was used by a department of 7.
 
